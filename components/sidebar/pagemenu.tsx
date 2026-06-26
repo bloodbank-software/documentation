@@ -18,6 +18,31 @@ export function PageMenu({ isSheet = false }) {
           return <Separator key={`spacer-${index}`} className="my-2" />
         }
 
+        if ('noLink' in item && item.noLink && item.items) {
+          return (
+            <div key={item.title + index}>
+              {item.heading && <div className="mb-4 text-sm font-bold">{item.heading}</div>}
+              <div className="mt-2.5 flex flex-col items-start gap-3 border-l pl-4 text-sm">
+                {item.items.map((innerLink) => {
+                  if (!('title' in innerLink && 'href' in innerLink)) return null
+
+                  return (
+                    <SubLink
+                      key={innerLink.title + innerLink.href}
+                      {...{
+                        ...innerLink,
+                        href: `/docs${item.href}${innerLink.href}`,
+                        level: 1,
+                        isSheet,
+                      }}
+                    />
+                  )
+                })}
+              </div>
+            </div>
+          )
+        }
+
         return (
           <div key={item.title + index}>
             {item.heading && <div className="mb-4 text-sm font-bold">{item.heading}</div>}

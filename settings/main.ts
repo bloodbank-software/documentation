@@ -1,21 +1,22 @@
-export const url = 'https://rubix-documents.vercel.app'
-export const siteicon = '/icon.png'
+export const url = 'http://localhost:3000'
+// export const siteicon = '/icon.png'
+export const siteicon = '/blood_logo.jpeg'
 
 export const gtm = 'GTM-XXXXXXX'
 export const gtmconnected = true
 
-export const sitename = 'Documents'
+export const sitename = 'Blood Bank'
 export const description =
-  'This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements.'
-export const keywords = ['Next.js', 'documentation', 'Rubix Studios', 'open source', 'SEO']
+  'End-user documentation for the Blood Bank system, covering operational workflows and day-to-day use.'
+export const keywords = ['Blood Bank', 'documentation', 'end user guide', 'blood inventory', 'operations']
 export const urlimage = '/images/og-image.png'
-export const imagealt = 'Rubix Studios Documentation'
-export const twitterhandle = '@RubixStudios'
+export const imagealt = 'Blood Bank Documentation'
+export const twitterhandle = ''
 
-export const companyname = 'Rubix Studios'
-export const companylink = 'https://rubixstudios.com.au'
+export const companyname = 'Blood Bank'
+export const companylink = '/'
 
-export const branding = true
+export const branding = false
 export const rightsidebar = true
 export const feedbackedit = true
 export const tableofcontent = true

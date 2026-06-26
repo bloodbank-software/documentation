@@ -3,96 +3,25 @@ import { type Paths } from '@/lib/pageroutes'
 export const Documents: Paths[] = [
   {
     heading: 'Introduction',
-    title: 'Basic Setup',
+    title: 'Overview',
     href: '/basic-setup',
+    noLink: true,
     items: [
       {
-        title: 'Installation',
-        href: '/installation',
+        title: 'Overview',
+        href: '',
       },
       {
-        title: 'Setup',
-        href: '/setup',
+        title: 'Key Features',
+        href: '/keyfeatures',
       },
       {
-        title: 'Changelog',
-        href: '/changelog',
-      },
-    ],
-  },
-  {
-    spacer: true,
-  },
-  {
-    title: 'Navigation',
-    href: '/navigation',
-    heading: 'Documents',
-  },
-  {
-    title: 'Structure',
-    href: '/structure',
-    items: [
-      {
-        title: 'Deep',
-        href: '/deep',
-        items: [
-          {
-            title: 'Deeper',
-            href: '/deeper',
-            items: [
-              {
-                title: 'Even deeper',
-                href: '/even-deeper',
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
-  {
-    spacer: true,
-  },
-  {
-    title: 'Markdown',
-    href: '/markdown',
-    heading: 'Components',
-    items: [
-      {
-        title: 'Cards',
-        href: '/cards',
+        title: 'User Roles & Access',
+        href: '/userroles',
       },
       {
-        title: 'Diagrams',
-        href: '/diagrams',
-      },
-      {
-        title: 'Filetree',
-        href: '/filetree',
-      },
-      {
-        title: 'Lists',
-        href: '/lists',
-      },
-      {
-        title: 'Maths',
-        href: '/maths',
-      },
-      {
-        title: 'Notes',
-        href: '/notes',
-      },
-      {
-        title: 'Steps',
-        href: '/steps',
-      },
-      {
-        title: 'Table',
-        href: '/table',
-      },
-      {
-        title: 'Tabs',
-        href: '/tabs',
+        title: 'Getting Started',
+        href: '/gettingstarted',
       },
     ],
   },

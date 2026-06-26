@@ -18,6 +18,11 @@ interface BreadcrumbProps {
   paths: string[]
 }
 
+function getBreadcrumbLabel(path: string) {
+  if (path === 'basic-setup') return 'Introduction'
+  return toTitleCase(path)
+}
+
 export function ArticleBreadcrumb({ paths }: BreadcrumbProps) {
   return (
     <Breadcrumb className="pb-5">
@@ -40,11 +45,11 @@ export function ArticleBreadcrumb({ paths }: BreadcrumbProps) {
             <BreadcrumbItem>
               <BreadcrumbLink asChild>
                 <Link
-                  title={toTitleCase(paths[0])}
-                  aria-label={toTitleCase(paths[0])}
+                  title={getBreadcrumbLabel(paths[0])}
+                  aria-label={getBreadcrumbLabel(paths[0])}
                   href={`/docs/${paths[0]}`}
                 >
-                  {toTitleCase(paths[0])}
+                  {getBreadcrumbLabel(paths[0])}
                 </Link>
               </BreadcrumbLink>
             </BreadcrumbItem>
@@ -79,6 +84,7 @@ export function ArticleBreadcrumb({ paths }: BreadcrumbProps) {
         ) : (
           paths.map((path, index) => {
             const href = `/docs/${paths.slice(0, index + 1).join('/')}`
+            const label = index === 0 ? getBreadcrumbLabel(path) : toTitleCase(path)
 
             return (
               <Fragment key={path}>
@@ -86,12 +92,12 @@ export function ArticleBreadcrumb({ paths }: BreadcrumbProps) {
                 <BreadcrumbItem>
                   {index < paths.length - 1 ? (
                     <BreadcrumbLink asChild>
-                      <Link title={toTitleCase(path)} aria-label={toTitleCase(path)} href={href}>
-                        {toTitleCase(path)}
+                      <Link title={label} aria-label={label} href={href}>
+                        {label}
                       </Link>
                     </BreadcrumbLink>
                   ) : (
-                    <BreadcrumbPage className="b">{toTitleCase(path)}</BreadcrumbPage>
+                    <BreadcrumbPage className="b">{label}</BreadcrumbPage>
                   )}
                 </BreadcrumbItem>
               </Fragment>
