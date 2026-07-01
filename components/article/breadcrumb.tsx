@@ -19,7 +19,7 @@ interface BreadcrumbProps {
 }
 
 function getBreadcrumbLabel(path: string) {
-  if (path === 'basic-setup') return 'Introduction'
+  if (path === 'introduction') return 'Introduction'
   return toTitleCase(path)
 }
 

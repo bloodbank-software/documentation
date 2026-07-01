@@ -16,7 +16,7 @@ export default function Home() {
 
       <div className="flex items-center gap-4">
         <Link
-          href="/docs/basic-setup"
+          href="/docs/introduction"
           className={buttonVariants({ className: 'px-6', size: 'lg' })}
         >
           Get Started

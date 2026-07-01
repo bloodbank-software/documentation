@@ -4,7 +4,7 @@ export const Documents: Paths[] = [
   {
     heading: 'Introduction',
     title: 'Overview',
-    href: '/basic-setup',
+    href: '/introduction',
     noLink: true,
     items: [
       {
@@ -16,12 +16,24 @@ export const Documents: Paths[] = [
         href: '/keyfeatures',
       },
       {
-        title: 'User Roles & Access',
-        href: '/userroles',
+        title: 'Workflow at a Glance',
+        href: '/workflowataglance',
       },
       {
         title: 'Getting Started',
         href: '/gettingstarted',
+      },
+    ],
+  },
+  {
+    heading: 'Master Data',
+    title: 'Master Data',
+    href: '/master-data',
+    noLink: true,
+    items: [
+      {
+        title: 'Collecting Locations',
+        href: '/collecting-locations',
       },
     ],
   },
