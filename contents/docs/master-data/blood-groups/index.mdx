@@ -1,0 +1,77 @@
+---
+title: Blood Groups
+description: Review and manage predefined blood group values used across the Blood Bank system.
+---
+
+# Master Data
+
+## Blood Groups
+
+Blood Groups are predefined reference values used throughout the Blood Bank system. These values are seeded during setup so the same blood group names are used everywhere in the application.
+
+![Blood Groups listing page](/screens/master-data/blood-groups/Bloodgroups_listing.png)
+
+## Overview
+
+The Blood Groups module is used to view and maintain the standard blood group values available in the system.
+
+These values are not created manually during daily work. They are prepared during setup and used as a fixed reference list so blood group information stays consistent across the system.
+
+## Purpose
+
+The main purpose of this module is to keep blood group information consistent across the application.
+
+Using a fixed list of blood groups helps the system:
+
+- avoid spelling mistakes
+- keep donor and inventory records uniform
+- make filtering and reporting easier
+- ensure the same blood group values are used in every module
+
+## Page Layout
+
+The Blood Groups page shows the available blood groups in a simple list or table view.
+
+The page is meant for review and configuration, not for creating or removing blood groups.
+
+Users can usually see:
+
+- the blood group name
+- any allowed configuration fields
+- an edit option for permitted values
+
+![Blood Groups edit page](/screens/master-data/blood-groups/Bloodgroup_edit.png)
+
+## Editable Fields
+
+Only specific fields may be editable in this module.
+
+The exact editable fields depend on how the system is configured, but this page is generally used to update blood group-related settings instead of changing the blood group list itself.
+
+Common editable values may include:
+
+- display settings
+- ordering or visibility-related configuration
+- any other allowed master configuration field shown on the page
+
+Users should only update the fields that are permitted by the system.
+
+## Used In
+
+Blood Groups are used in multiple parts of the Blood Bank workflow, including:
+
+- donor registration
+- blood unit creation
+- inventory listing and dashboard views
+- reporting screens
+
+Because blood groups are used everywhere, keeping this master list clean and accurate is important.
+
+## Important Notes
+
+- Blood groups are predefined master values.
+- They are seeded during setup.
+- Users can view the available blood groups in this module.
+- Only allowed configuration fields should be edited.
+- No status handling section is needed if the UI does not show a status option.
+- Keep the blood group list clean so it can be reused consistently across the system.

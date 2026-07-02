@@ -49,22 +49,24 @@ export function NavMenu({ isSheet = false }) {
   return (
     <>
       {Navigations.map((item) => {
+        const navItem = item as { title: string; href: string; external?: boolean }
+        const isExternal = Boolean(navItem.external)
         const Comp = (
           <Anchor
-            key={item.title + item.href}
+            key={navItem.title + navItem.href}
             absolute
             activeClassName="font-bold text-primary"
             className="flex items-center gap-1 text-sm"
-            href={item.href}
-            target={item.external ? '_blank' : undefined}
-            rel={item.external ? 'noopener noreferrer' : undefined}
+            href={navItem.href}
+            target={isExternal ? '_blank' : undefined}
+            rel={isExternal ? 'noopener noreferrer' : undefined}
           >
-            {item.title}{' '}
-            {item.external && <LuArrowUpRight className="h-3 w-3 align-super" strokeWidth={3} />}
+            {navItem.title}{' '}
+            {isExternal && <LuArrowUpRight className="h-3 w-3 align-super" strokeWidth={3} />}
           </Anchor>
         )
         return isSheet ? (
-          <SheetClose key={item.title + item.href} asChild>
+          <SheetClose key={navItem.title + navItem.href} asChild>
             {Comp}
           </SheetClose>
         ) : (

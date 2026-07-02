@@ -1,0 +1,148 @@
+---
+title: Phlebotomist
+description: Manage blood collection staff used in the Blood Bank workflow.
+---
+
+## Phlebotomist
+
+Phlebotomists are the staff members who collect blood from donors. This module helps the team maintain a structured list of phlebotomists and use them consistently during blood collection workflows.
+
+![Phlebotomist listing page](/screens/master-data/phlebotomist/Phlebotomist_listing.png)
+
+## Overview
+
+The Phlebotomist module is used to manage all blood collection staff in one place.
+
+From here, users can:
+
+- view all phlebotomists in a table
+- add a new phlebotomist
+- edit an existing phlebotomist
+- mark a phlebotomist as active or inactive
+- delete a phlebotomist when it is no longer needed
+
+This module keeps staff information organized and makes it easier to use during the blood collection process.
+
+## Purpose
+
+The main purpose of this module is to store and maintain phlebotomist details in a standard format.
+
+Instead of entering staff details manually each time, users can select a saved phlebotomist from the list. This reduces mistakes and keeps the workflow consistent.
+
+## Page Layout
+
+The Phlebotomist page shows a table with the main details needed for daily work.
+
+The page also includes an **Add Phlebotomist** button for creating a new entry.
+
+Each row contains action buttons that let users edit or delete the record as needed.
+
+## Field Guide
+
+| Field | Description |
+|---|---|
+| **Code** | Auto-generated code for the phlebotomist. |
+| **Name** | Phlebotomist name. |
+| **Employee ID** | Staff reference ID used to identify the person. |
+| **Phone / Email** | Contact details for communication. |
+| **Gender** | Optional personal detail if shown in the form. |
+| **Status** | Shows whether the phlebotomist is **Active** or **Inactive**. |
+
+![Phlebotomist actions](/screens/master-data/phlebotomist/Phlebotomist_actions.png)
+
+## Actions Available
+
+Each phlebotomist row supports the following actions:
+
+- **Edit** - update phlebotomist details
+- **Delete** - remove the phlebotomist if it is no longer required
+- **Status** - review whether the phlebotomist is active or inactive
+
+These actions help maintain the staff list without needing a separate screen.
+
+## Add Phlebotomist
+
+Use this option when you want to create a new phlebotomist entry.
+
+### Steps
+
+1. Open the **Phlebotomist** page.
+2. Click **Add Phlebotomist**.
+3. Enter the phlebotomist name.
+4. Enter the employee ID.
+5. Enter the phone number or email address.
+6. Select gender if it is available in the form.
+7. Review the details carefully.
+8. Save the record.
+
+After saving, the new phlebotomist appears in the listing and becomes available for use where applicable.
+
+![Add Phlebotomist form](/screens/master-data/phlebotomist/Phlebotomist_add.png)
+
+## Edit Phlebotomist
+
+Use the edit option when an existing phlebotomist needs to be corrected or updated.
+
+### Steps
+
+1. Find the required phlebotomist in the list.
+2. Click the **Edit** button.
+3. Update the required fields.
+4. Review the changes.
+5. Save the record.
+
+Editing is useful when contact details change, the employee reference needs correction, or the status must be updated.
+
+![Edit Phlebotomist form](/screens/master-data/phlebotomist/Phlebotomist_edit.png)
+
+## Status Handling
+
+Phlebotomists can be maintained with two status values:
+
+- **Active**
+- **Inactive**
+
+### Active
+
+An active phlebotomist is available for selection during blood collection workflows.
+
+### Inactive
+
+An inactive phlebotomist is kept in the system for reference, but it is not meant to be used for new operational entries.
+
+This helps the team keep only valid and current staff records available for work.
+
+![Phlebotomist status handling](/screens/master-data/phlebotomist/Phlebotomist_status.png)
+
+## Delete Behavior
+
+If a phlebotomist is no longer needed, it can be deleted from the module.
+
+### What happens when a phlebotomist is deleted
+
+- a confirmation prompt appears first
+- the user must confirm the action
+- after confirmation, the phlebotomist is removed from the listing
+
+This helps prevent accidental removal of staff records that may still be needed.
+
+![Delete Phlebotomist confirmation](/screens/master-data/phlebotomist/Phlebotomist_delete.png)
+
+## Used In
+
+Phlebotomists are used in the blood unit collection flow.
+
+When a user adds a new blood unit, the system shows the available phlebotomists in a dropdown. The user selects the person who collected the blood from that list.
+
+This keeps blood collection records consistent and helps the team identify who performed the collection.
+
+![Phlebotomist usage in other workflows](/screens/master-data/phlebotomist/Phlebotomist_usage.png)
+
+## Important Notes
+
+- Keep phlebotomist names clear and easy to identify.
+- Always maintain correct contact details for communication.
+- Enter the employee ID carefully so each staff member can be identified correctly.
+- Mark unused phlebotomists as inactive instead of leaving them active.
+- Delete a phlebotomist only when it is no longer needed.
+- The phlebotomist selected during blood unit creation becomes part of the blood unit record.
