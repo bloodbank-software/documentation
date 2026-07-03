@@ -59,6 +59,14 @@ export const Documents: Paths[] = [
         title: 'Blood Groups',
         href: '/blood-groups',
       },
+      {
+        title: 'Blood Component Types',
+        href: '/component-types',
+      },
+      {
+        title: 'Returns & Discards Reasons',
+        href: '/return-discard-reasons',
+      },
     ],
   },
 ]

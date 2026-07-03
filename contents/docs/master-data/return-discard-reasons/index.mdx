@@ -1,0 +1,163 @@
+---
+title: Returns & Discards Reasons
+description: Manage return to stock and discard reasons used in Blood Bank workflows.
+---
+
+# Master Data
+
+## Returns & Discards Reasons
+
+The Returns & Discards Reasons module is used to manage the standard reasons available for returning a blood unit back to stock or discarding a blood unit permanently.
+
+This is a shared master-data page for both workflows:
+
+- Return to Stock Reasons
+- Discard / Waste Reasons
+
+## Overview
+
+The Returns & Discards Reasons page helps the team maintain a clean and reusable list of reasons used in blood unit handling.
+
+From here, users can:
+
+- view all return reasons
+- view all discard reasons
+- add a new reason
+- edit an existing reason
+- mark a reason as active or inactive
+- delete a reason when it is no longer needed
+
+This module keeps return and discard workflows standardized across the system.
+
+## Purpose
+
+The main purpose of this module is to store approved return and discard reasons in one place.
+
+Instead of typing reason text manually during blood unit processing, staff can select a predefined reason from the list. This keeps records consistent and reduces mistakes.
+
+## Page Layout
+
+The page is divided into two sections:
+
+- **Return to Stock Reasons**
+- **Discard / Waste Reasons**
+
+The listing page shows both reason groups separately so users can quickly find the correct reason for the required workflow.
+
+![Returns and Discards Reasons listing page](/screens/master-data/return-discard/ReturnDiscard_Listing.png)
+
+Each section displays a table with the following fields:
+
+- Code
+- Reason
+- Description
+- Status
+- Actions
+
+### Field meaning
+
+- **Code** - system-generated reason code
+- **Reason** - the reason name shown to users
+- **Description** - short explanation of the reason
+- **Status** - shows whether the reason is active or inactive
+- **Actions** - edit and delete buttons for each row
+
+The top-right corner contains the **Add Reason** button, which is used to create a new return or discard reason.
+
+## Add Reason
+
+Use this option when you want to create a new reason.
+
+### Steps
+
+1. Open the **Returns & Discards Reasons** page.
+2. Click **Add Reason**.
+3. Enter the reason name.
+4. Select the reason type:
+   - Return
+   - Discard
+5. Enter a short description.
+6. Review the details carefully.
+7. Save the record.
+
+After saving, the new reason appears in the appropriate section.
+
+![Add Return or Discard Reason form](/screens/master-data/return-discard/ReturnDisard_add.png)
+
+## Edit Reason
+
+Use the edit option when you need to update an existing reason.
+
+### Steps
+
+1. Find the required reason in the list.
+2. Click the **Edit** button.
+3. Update the reason name if needed.
+4. Update the description if needed.
+5. Change the status if required.
+6. Review the changes.
+7. Save the record.
+
+Editing is useful when the reason text needs correction or the status needs to be changed.
+
+![Edit Return or Discard Reason form](/screens/master-data/return-discard/ReturnDiscard_edit.png)
+
+## Status Handling
+
+Reasons can be in one of two states:
+
+- **Active**
+- **Inactive**
+
+### Active
+
+An active reason is available for selection during return or discard workflows.
+
+### Inactive
+
+An inactive reason should not be available in selection lists, so users cannot choose it in daily workflows.
+
+This helps the team keep only valid and approved reasons available.
+
+## Delete Behavior
+
+If a reason is no longer needed, it can be deleted from the module.
+
+### What happens when a reason is deleted
+
+- a confirmation popup appears first
+- the user must confirm the action
+- after confirmation, the reason is removed from the listing
+- deleted reasons should no longer be used in future workflows
+
+This prevents old or unused reasons from being selected by mistake.
+
+![Delete Return or Discard Reason confirmation](/screens/master-data/return-discard/ReturnDiscard_delete.png)
+
+## Used In
+
+### Return Reasons
+
+Return reasons are used in the **Return** tab of the Add Blood Unit flow.
+
+When a blood unit is returned after issue, the user selects the appropriate return reason from this list.
+
+![Return reason usage](/screens/master-data/return-discard/Return_usage.png)
+
+### Discard Reasons
+
+Discard reasons are used in the **Discard** action inside the Inventory module.
+
+When a blood unit must be discarded, the user selects the correct discard reason before confirming the action.
+
+![Discard reason usage](/screens/master-data/return-discard/Discard_usage.png)
+
+## Important Notes
+
+- Keep reason names short and clear.
+- Use Return reasons only for return-to-stock workflows.
+- Use Discard reasons only for discard workflows.
+- The Type dropdown is used to choose whether the reason belongs to Return or Discard.
+- Mark unused reasons as inactive instead of leaving them active.
+- Delete a reason only when it is no longer needed.
+- The selected reason becomes part of the blood unit record and helps maintain audit clarity.
