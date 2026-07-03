@@ -69,4 +69,20 @@ export const Documents: Paths[] = [
       },
     ],
   },
+  {
+    heading: 'Tools & Utilities',
+    title: 'Tools & Utilities',
+    href: '/tools-utilities',
+    noLink: true,
+    items: [
+      {
+        title: 'Donor Card Print',
+        href: '/donor-card-print',
+      },
+      {
+        title: 'Pre-Print QR Codes',
+        href: '/pre-print-qr-codes',
+      },
+    ],
+  },
 ]

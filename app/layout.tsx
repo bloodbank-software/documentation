@@ -1,6 +1,5 @@
 import { GoogleTagManager } from '@next/third-parties/google'
 import { type Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { type ReactNode } from 'react'
 
 import { Footer } from '@/components/navigation/footer'
@@ -9,14 +8,6 @@ import { Providers } from '@/providers'
 import { Settings } from '@/types/settings'
 
 import '@/styles/globals.css'
-
-const inter = Inter({
-  adjustFontFallback: true,
-  display: 'swap',
-  preload: true,
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
 
 const baseUrl = Settings.metadataBase
 
@@ -56,7 +47,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html data-scroll-behavior="smooth" lang="en" suppressHydrationWarning>
       {Settings.gtmconnected && <GoogleTagManager gtmId={Settings.gtm} />}
-      <body className={`${inter.variable} font-regular antialiased`}>
+      <body className="font-regular antialiased">
         <Providers>
           <Navbar />
           <main className="h-auto px-5 sm:px-8">{children}</main>
