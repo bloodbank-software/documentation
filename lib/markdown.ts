@@ -1,6 +1,7 @@
 import { createReadStream, promises as fs } from 'node:fs'
 import path from 'node:path'
 import { type Element, type Text } from 'hast'
+import matter from 'gray-matter'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import { cache } from 'react'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -91,7 +92,8 @@ export const getDocument = cache(async (slug: string) => {
       lastUpdated = stats.mtime.toISOString()
     }
 
-    const parsedMdx = await parseMdx<MdxHeaders>(mdx)
+    const { content: normalizedMdx } = stripLeadingTitleHeading(mdx)
+    const parsedMdx = await parseMdx<MdxHeaders>(normalizedMdx)
     const tocs = await getTable(slug)
 
     return {
@@ -105,6 +107,26 @@ export const getDocument = cache(async (slug: string) => {
     return null
   }
 })
+
+function stripLeadingTitleHeading(rawMdx: string) {
+  const parsed = matter(rawMdx)
+  const title = parsed.data.title
+
+  if (!title) {
+    return { content: rawMdx }
+  }
+
+  const fallbackRegex = new RegExp(String.raw`^#\s+${escapeRegExp(String(title))}\s*(?:\r?\n)+`)
+  const cleanedContent = parsed.content.replace(fallbackRegex, '')
+
+  return {
+    content: matter.stringify(cleanedContent, parsed.data),
+  }
+}
+
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
 
 const headingsRegex = /^(#{2,4})\s(.+)$/gm
 

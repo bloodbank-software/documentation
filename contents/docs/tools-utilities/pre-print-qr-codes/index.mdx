@@ -1,21 +1,20 @@
 ---
 title: Pre-Print QR Codes
-description: Generate QR codes in advance before assigning them to blood units.
+description: Generate QR codes in advance before they are assigned to blood units.
 ---
-
 ## Pre-Print QR Codes
-
 The Pre-Print QR Codes page is used to generate QR codes in advance before they are assigned to blood units.
 
-This tool helps staff prepare printable QR codes in bulk and review them in a clear list-based view.
+This page helps staff prepare QR codes in bulk and review them before printing.
 
 ![Pre-Print QR Codes overview](/screens/tools-utilities/pre-print-qr-codes/PrePrintQR_Overview.png)
 
+
 ## Overview
 
-Pre-Print QR Codes allows users to create QR labels before blood unit allocation.
+The Pre-Print QR Codes page allows users to create QR codes before blood unit allocation.
 
-The page provides a simple workflow to configure the number of QR codes, review generated entries, preview individual QR codes, and print them when needed.
+Users can configure how many QR codes to generate, set duplicate count if needed, review the generated list, and print the QR sheets when required.
 
 ## Purpose
 
@@ -27,77 +26,72 @@ It is useful when QR codes need to be prepared ahead of collection, stock handli
 
 The page is divided into two main parts:
 
-- a configuration section at the top
-- a QR list section below it
+- a QR generation area at the top
+- a QR list area below it
 
-The configuration section is used to set the QR generation values.
+The generation area is used to set the required values before creating QR codes.
 
-The list section is used to review generated QR codes in separate tabs.
+The list area shows generated QR codes in tabs for easy review.
 
-## QR Generation Settings
+## Generate QR Codes
 
-Before generating QR codes, the user can enter the required configuration details such as:
+To generate QR codes, the user enters the required values and starts the generation process.
+
+The user can set:
 
 - quantity
 - duplicate count
-- camp or source selection, if applicable
 
-These settings determine how many QR codes will be created and how they will be grouped.
+After the values are entered, the page generates the QR codes for later use.
 
-![Pre-Print QR Codes print modal](/screens/tools-utilities/pre-print-qr-codes/PrePrintQR_PrintModal.png)
+![Pre-Print QR Codes generate and print](/screens/tools-utilities/pre-print-qr-codes/PrePrintQR_Generate&Print.png)
+
+## Camp Selection
+
+Camp selection is used when the QR codes need to be linked to a camp.
+
+This helps staff group QR codes by camp and keep the QR batches easier to track later.
+
+![Pre-Print QR Codes for camp](/screens/tools-utilities/pre-print-qr-codes/PrePrintQR_ForCamp.png)
 
 ## Unassigned QR Codes
 
-The **Unassigned** tab shows QR codes that have been generated but not yet linked to a blood unit.
+The **Unassigned** tab shows QR codes that have been generated but are not yet linked to a blood unit.
 
-This view is useful when QR labels are being prepared in advance and are still waiting for allocation.
+This tab helps users see which QR codes are still available for future allocation.
 
-The table helps users quickly check:
-
-- QR ID
-- generated time
-- current status
-- assigned state
-
-![Pre-Print QR Codes unassigned list](/screens/tools-utilities/pre-print-qr-codes/PrePrintQR_UnassignedList.png)
+![Pre-Print QR Codes unassigned](/screens/tools-utilities/pre-print-qr-codes/PrePrintQR_Unassigned.png)
 
 ## Assigned QR Codes
 
 The **Assigned** tab shows QR codes that are already linked to blood units.
 
-This helps staff track which QR code has already been used and which blood unit it belongs to.
+This helps staff understand which QR codes have already been used and prevents duplicate assignment.
 
-This view is important for avoiding duplicate assignment and for quick verification during operations.
+![Pre-Print QR Codes assigned](/screens/tools-utilities/pre-print-qr-codes/PrePringQr_Assigned.png)
 
-![Pre-Print QR Codes assigned list](/screens/tools-utilities/pre-print-qr-codes/PrePrintQR_AssignedList.png)
+## View Action
 
-## QR Preview
+When the user clicks the **View** action, a QR preview opens.
 
-Each QR code can be previewed before printing.
+This lets the user inspect the QR code before printing and confirm the QR ID visually.
 
-The preview popup shows:
-
-- the QR image
-- the QR ID
-
-This allows users to confirm the QR code before sending it to print.
-
-![Pre-Print QR Codes preview](/screens/tools-utilities/pre-print-qr-codes/PrePrintQR_QRPreview.png)
+![Pre-Print QR Codes view action](/screens/tools-utilities/pre-print-qr-codes/PrePrintQr_ViewAction.png)
 
 ## Print Action
 
-After selecting a QR code, the user can open the print action.
+When the user clicks the **Print** action, the page opens a print-friendly QR sheet.
 
-The print flow shows the QR in a print-friendly format so it can be saved or printed directly.
+This generates the final printable QR output for label preparation or physical use.
 
-This ensures the QR code is ready for label printing or physical use.
-
-![Pre-Print QR Codes print output](/screens/tools-utilities/pre-print-qr-codes/PrePrintQR_PrintOutput.png)
+![Pre-Print QR Codes print action](/screens/tools-utilities/pre-print-qr-codes/PrePrintQr_PrintActions.png)
 
 ## Important Notes
 
-- Generated QR codes are available in list form after creation.
-- Unassigned and assigned QR codes are shown separately for clarity.
-- QR preview should be checked before printing if verification is needed.
-- Print layout may vary depending on the browser print settings.
-- This page is intended for QR preparation and management only.
+- Generate QR codes in advance when labels are needed before blood unit assignment.
+- Quantity and duplicate count should be checked carefully before generating.
+- Unassigned QR codes are available for future allocation.
+- Assigned QR codes are already used and should be reviewed only.
+- Use **View** to verify a QR code before printing.
+- Use **Print** to create the final printable QR sheet.
+- The page supports both review and printing of generated QR codes.
