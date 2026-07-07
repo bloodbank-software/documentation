@@ -36,6 +36,10 @@ export const Documents: Paths[] = [
         href: '',
       },
       {
+        title: 'User Management',
+        href: '/user-management',
+      },
+      {
         title: 'Collecting Locations',
         href: '/collecting-locations',
       },
@@ -82,6 +86,22 @@ export const Documents: Paths[] = [
       {
         title: 'Pre-Print QR Codes',
         href: '/pre-print-qr-codes',
+      },
+      {
+        title: 'Blood Camp Manager',
+        href: '/blood-camp-manager',
+      },
+      {
+        title: 'Blood Group Statistics',
+        href: '/blood-group-statistics',
+      },
+      {
+        title: 'Donation Reminder',
+        href: '/donation-reminder',
+      },
+      {
+        title: 'Report Generator',
+        href: '/report-generator',
       },
     ],
   },

@@ -1,0 +1,376 @@
+---
+title: User Management
+description: Manage users, roles, permissions, login history, impersonation, editing, adding, and deleting users.
+---
+
+# User Management
+
+The User Management module is one of the most important parts of the Blood Bank system.
+
+It is used to manage system users, their roles, permissions, permission history, login history, impersonation, editing, adding, and deleting users.
+
+## Overview
+
+The User Management module is a central administration area used by authorized staff to control who can access the system and what they can do inside it.
+
+It helps the team:
+
+- view all users in one place
+- add new users
+- edit user details
+- assign or change roles
+- manage module permissions
+- review permission history
+- review login history
+- impersonate a user when support is needed
+- delete users with confirmation
+
+![User Management listing](/screens/master-data/user-management/UserManagement_Listing.png)
+
+## Purpose
+
+This module is used to keep access control secure and organized.
+
+It helps administrators and authorized staff:
+
+- maintain active user accounts
+- control access by assigning roles and permissions
+- track changes made to roles and permissions
+- review login activity for security and audit purposes
+- manage all user administration actions from one central screen
+
+## Page Layout
+
+The User Management page is organized as a single administration screen under **Master Data**.
+
+| Area | Description |
+| --- | --- |
+| Search area | Helps staff find users quickly |
+| Add User button | Opens the form for creating a new user |
+| User listing table | Shows all users in the system |
+| Action icons | Provide quick actions for view, edit, impersonate, and delete |
+| User detail page | Shows user information and tabs for permissions and history |
+| Update Role action | Changes the user’s role when needed |
+
+This layout keeps user administration in one place and makes it easy to manage access without moving between multiple screens.
+
+## User Listing
+
+The main listing page shows all users in a table format.
+
+![User Management listing](/screens/master-data/user-management/UserManagement_Listing.png)
+
+### Listing columns
+
+| Column | Description |
+| --- | --- |
+| Username | The user account name |
+| Email | The registered email address |
+| Phone Number | The contact number |
+| Status | The account state such as Active |
+| Role | The assigned role such as Admin, Sub Admin, Agent, or Guest |
+| Created By | The person who created the user |
+| Verification | Whether the user is verified |
+| Actions | Quick action icons for the user |
+
+### Search
+
+The search box helps staff find a user quickly by username or related details.
+
+### Rows per page
+
+The rows per page option controls how many user records are shown on one page.
+
+### Pagination
+
+Pagination is used to move between pages when there are many users.
+
+### Add User button
+
+The **Add User** button opens the form for creating a new user account.
+
+### Action icons
+
+Each row contains action icons for:
+
+- **View** - opens the user detail page
+- **Edit** - updates user details
+- **Impersonate** - opens the application in the selected user’s context when allowed
+- **Delete** - removes the user account after confirmation
+
+## Add User
+
+The **Add User** action opens the user creation form.
+
+![Add User form](/screens/master-data/user-management/UserManagement_add.png)
+
+### Form fields
+
+| Field | Description |
+| --- | --- |
+| Username | Required account name |
+| Email | Required email address |
+| Password | Required login password |
+| Mobile Number | Required phone number with country code |
+| Role | Required access role selection |
+
+### Steps to add a user
+
+1. Click **Add User**
+2. Enter the username
+3. Enter the email address
+4. Enter the password
+5. Enter the mobile number
+6. Select the role
+7. Click **Add**
+
+### Important behavior
+
+- Required fields are clearly marked
+- The role must be selected before submission
+- **Cancel** can be used to close the form without saving
+
+## Edit User
+
+The **Edit** action opens a form to update existing user information.
+
+![Edit User form](/screens/master-data/user-management/UserManagement_edit.png)
+
+### Editable fields
+
+| Field | Description |
+| --- | --- |
+| Username | Update the user account name if needed |
+| Mobile Number | Update the contact number |
+| Status | Change the user state such as Active or Inactive |
+
+### Steps to edit a user
+
+1. Click the **Edit** icon in the user row
+2. Update the required information
+3. Change the status if needed
+4. Click **Update**
+
+### Common use cases
+
+- Correcting a username
+- Updating the mobile number
+- Changing a user from Active to Inactive or Blocked
+
+## View User Details
+
+The **View** action opens the user detail screen.
+
+![User detail overview](/screens/master-data/user-management/UserManagement_ViewAction_Overview.png)
+
+This page gives a complete view of the selected user and includes tabs for permissions and history.
+
+### User detail header
+
+The top area shows:
+
+- User name
+- Email address
+- Phone number
+- Join date
+- Current role
+- Current status
+- Verification state
+
+### Tabs available
+
+- Permission
+- Permission History
+- Login History
+
+### Update Role button
+
+A separate **Update Role** button is available at the top right for changing the user’s role.
+
+## Permission Tab
+
+The **Permission** tab is used to manage module-level access rights for the selected user.
+
+![Permission Tab](/screens/master-data/user-management/UserManagement_PermissionTab.png)
+
+### What the permission area shows
+
+| Item | Description |
+| --- | --- |
+| Module permission cards | Show permissions grouped by module |
+| Permission counts | Show how many permissions are enabled |
+| Enable or disable toggle | Turns module access on or off |
+| Search modules field | Helps find a module quickly |
+| Select all option | Lets staff enable all available permissions when needed |
+
+### Module card details
+
+Each module card usually displays:
+
+- Module name
+- Short description of the module
+- Number of permissions enabled
+- Enable or disable switch
+- Individual permissions within the module
+
+### How it works
+
+1. Open the **Permission** tab
+2. Search for a module if needed
+3. Expand the module card
+4. Review the available permissions
+5. Enable or disable permissions based on access requirement
+6. Use **Select all** when appropriate
+
+### Purpose of this tab
+
+This tab allows administrators to control what the user can do in each module, such as viewing, creating, editing, deleting, impersonating, and managing users.
+
+## Permission History Tab
+
+The **Permission History** tab shows the record of permission changes made for the user.
+
+![Permission History Tab](/screens/master-data/user-management/UserManagement_PermissionHistoryTab.png)
+
+### What the table shows
+
+| Column | Description |
+| --- | --- |
+| Changes | The type of permission update that was made |
+| Changed By | The user who made the change |
+| Changed At | The date and time of the change |
+| Details | Specific permission changes such as allowed or denied states |
+
+### How to use it
+
+1. Open the **Permission History** tab
+2. Review the list of changes
+3. Check who changed the permissions
+4. Review the exact permission state before and after the change
+
+### Purpose of this tab
+
+This tab is useful for audit tracking and for understanding how and when a user’s access rights were changed.
+
+## Login History Tab
+
+The **Login History** tab shows the user’s login activity.
+
+![Login History Tab](/screens/master-data/user-management/UserManagement_LoginHistoryTab.png)
+
+### What the table shows
+
+| Column | Description |
+| --- | --- |
+| Date & Time | When the login happened |
+| IP Address | Source IP address |
+| Device | Device type such as Desktop |
+| Browser Name | Browser used for login |
+| OS | Operating system |
+| Status | Login result such as login successful |
+
+### How to use it
+
+1. Open the **Login History** tab
+2. Review login records
+3. Check the IP address, device, browser, and operating system
+4. Verify whether the login was successful
+
+### Purpose of this tab
+
+This tab helps monitor account access and supports security review when needed.
+
+## Update Role
+
+The **Update Role** action allows the administrator to reassign the user to a different role.
+
+![Update Role](/screens/master-data/user-management/UserManagement_UpdateRole.png)
+
+### How it works
+
+1. Open the user detail screen
+2. Click **Update Role**
+3. Select a new role from the dropdown
+4. Review the selected role carefully
+5. Click **Update**
+
+### Common roles shown
+
+- Admin
+- Sub Admin
+- Guest
+
+### Purpose of this action
+
+Role reassignment is used when a user’s access level needs to change because of job responsibilities or permission requirements.
+
+## Impersonate User
+
+The **Impersonate User** action allows an authorized admin to open the application in another user’s context for support or troubleshooting.
+
+![Impersonate User](/screens/master-data/user-management/UserManagement_Impersonate.png)
+
+### Where it appears
+
+In the user listing, the impersonate icon is available in the **Actions** column.
+
+### How it works
+
+1. Locate the required user in the list
+2. Click the **Impersonate** icon
+3. The system switches into the selected user context if permission is allowed
+4. Perform the required support or review task
+5. Exit impersonation when done
+
+### Purpose of this action
+
+This feature is useful for:
+
+- Support troubleshooting
+- Permission verification
+- Checking what a user can see
+- Assisting users without asking them to explain every screen
+
+## Delete User
+
+The **Delete** action removes a user after confirmation.
+
+![Delete User](/screens/master-data/user-management/UserManagement_delete.png)
+
+### How it works
+
+1. Click the **Delete** icon in the user row
+2. A confirmation dialog appears
+3. Review the warning message carefully
+4. Click **Yes, Delete** only if the action is intended
+5. Use **Cancel** to stop the deletion
+
+### Important behavior
+
+- Deletion requires confirmation
+- The action is shown clearly to prevent accidental removal
+- This is a sensitive operation and should be used carefully
+
+## Important Notes
+
+| Note | Description |
+| --- | --- |
+| Security module | User Management is a critical security module |
+| Role changes | Role and permission changes should be reviewed carefully |
+| Audit review | Permission history and login history are useful for audits |
+| Impersonation | Impersonation should only be used by authorized staff |
+| Deletion | Deleting a user is sensitive and should be done with caution |
+| Single page | This module is best documented as one single page with sections for each action and tab |
+
+## Screenshot Map
+
+- `UserManagement_Listing.png` - user listing table, search, pagination, and actions
+- `UserManagement_add.png` - add user form
+- `UserManagement_edit.png` - edit user form
+- `UserManagement_ViewAction_Overview.png` - user detail overview page
+- `UserManagement_PermissionTab.png` - permission tab and module permissions cards
+- `UserManagement_PermissionHistoryTab.png` - permission history tab
+- `UserManagement_LoginHistoryTab.png` - login history tab
+- `UserManagement_UpdateRole.png` - update role action
+- `UserManagement_Impersonate.png` - impersonate user action
+- `UserManagement_delete.png` - delete confirmation dialog

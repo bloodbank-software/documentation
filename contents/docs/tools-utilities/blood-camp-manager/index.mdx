@@ -1,0 +1,133 @@
+---
+title: Blood Camp Manager
+description: Create, track, and manage blood donation camps from a single screen.
+---
+
+The Blood Camp Manager page is used to create, track, and manage blood donation camps from one screen.
+
+It helps users maintain camp details such as camp name, location, date, target, current donation count, and status.
+
+![Blood Camp Manager listing](/screens/tools-utilities/blood-camp-manager/BloodCamp_listing.png)
+
+## Overview
+
+Blood Camp Manager is used to organize blood donation camp details in one place.
+
+From this page, users can:
+
+- register new blood camps
+- monitor ongoing and completed camps
+- track donation progress
+- update camp details when plans change
+- remove camps when they are no longer needed
+
+This page helps staff keep camp records clear and easy to review.
+
+## Purpose
+
+The main purpose of this module is to manage blood camp information in a simple and structured way.
+
+It helps users:
+
+- plan and record new camps
+- follow donation progress
+- keep camp records up to date
+- remove old camps that are no longer required
+
+## Page Layout
+
+The page is divided into two main parts:
+
+- the camp listing table, which shows all existing camps
+- the summary cards, which provide a quick view of overall camp activity
+
+The top-right **Add Camp** button opens the form for creating a new blood camp.
+
+## Listing View
+
+The listing page shows all blood camps in a table format. Each row represents one camp.
+
+The main fields shown in the table are:
+
+- **Camp ID** - auto-generated unique ID for the camp
+- **Name** - camp name
+- **Location** - place where the camp is being conducted
+- **Date** - scheduled camp date
+- **Target** - planned donation target for the camp
+- **Actual Count** - number of donations collected so far
+- **Status** - current camp state such as Planned, Ongoing, or Completed
+- **Actions** - buttons to view, edit, or delete the camp
+
+![Blood Camp Manager listing and table](/screens/tools-utilities/blood-camp-manager/BloodCamp_listing.png)
+
+## Summary Cards
+
+The bottom section shows a quick dashboard of camp activity.
+
+These cards help users understand camp progress at a glance:
+
+- **Planned Camps** - number of camps that are scheduled but not started
+- **Ongoing Camps** - number of camps currently in progress
+- **Completed Camps** - number of camps that have finished
+- **Total Donations** - total number of donations collected across camps
+
+## Add Camp
+
+Use this option to create a new blood camp.
+
+### Steps to Add Camp
+
+1. Click the **Add Camp** button.
+2. Fill in the camp details:
+   - Camp Name
+   - Location
+   - Target
+   - Date
+   - Status
+3. Review the details carefully.
+4. Click **Add** to save the camp.
+
+After saving, the new camp will appear in the listing table.
+
+![Blood Camp Manager add form](/screens/tools-utilities/blood-camp-manager/BloodCamp_add.png)
+
+## Edit Camp
+
+Use the edit option when you need to update an existing camp.
+
+### Steps to Edit Camp
+
+1. Click the edit icon in the **Actions** column.
+2. The edit form opens with the current camp details already filled in.
+3. Modify the required fields such as:
+   - Camp Name
+   - Location
+   - Target
+   - Date
+   - Status
+4. Click **Update Camp** to save the changes.
+
+![Blood Camp Manager edit form](/screens/tools-utilities/blood-camp-manager/BloodCamp_edit.png)
+
+## Delete Camp
+
+Use the delete option when a camp is no longer needed.
+
+### Steps to Delete Camp
+
+1. Click the delete icon in the **Actions** column.
+2. A confirmation dialog appears.
+3. Confirm the deletion if you want to permanently remove the camp.
+4. Click **Yes, Delete** to complete the action.
+
+This action should be used carefully because deleted camp records cannot be restored through the UI.
+
+![Blood Camp Manager delete confirmation](/screens/tools-utilities/blood-camp-manager/BloodCamp_delete.png)
+
+## Important Notes
+
+- Camp IDs are auto-generated.
+- The listing table is the main place to monitor camp progress.
+- The status column helps users quickly identify whether a camp is Planned, Ongoing, or Completed.
+- The summary cards provide a simple dashboard view of overall camp performance.
+- Always verify camp details before editing or deleting a record.

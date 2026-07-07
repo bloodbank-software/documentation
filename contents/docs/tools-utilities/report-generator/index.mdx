@@ -1,0 +1,318 @@
+---
+title: Report Generator
+description: Create downloadable reports for donor, donation, and inventory data.
+---
+
+The Report Generator module helps staff create downloadable reports from the blood bank system in a simple step-by-step flow.
+
+It supports three main report types:
+
+- Donor Enrollment Report
+- Donation Report
+- Inventory Report
+
+![Report Generator overview](/screens/tools-utilities/report-genertor/DonorEnrollmentReport_Overview.png)
+
+## Overview
+
+The Report Generator page is used to build reports by selecting the report type, choosing the required fields, applying filters, and picking the export format.
+
+After a report is generated, it appears in **Recent Reports** so it can be downloaded again later if needed.
+
+
+
+## Purpose
+
+This module is used to:
+
+- generate reports for donor, donation, and inventory data
+- select only the columns that are needed in the report
+- filter records by date, blood group, status, location, and other criteria
+- export reports in **PDF**, **Excel**, or **CSV**
+- review and download previously generated reports from the recent reports list
+
+## Page Layout
+
+The Report Generator page is organized into clear sections so staff can build a report step by step.
+
+| Section | Description |
+| --- | --- |
+| Report Type | Choose the kind of report to generate |
+| Report Fields | Select which columns should appear in the report |
+| Export Format | Choose PDF, Excel, or CSV |
+| Filters | Narrow down the data using the available criteria |
+| Generate Report | Create the report |
+| Recent Reports | View and download previously generated reports |
+
+![Report fields, formats and filters](/screens/tools-utilities/report-genertor/ReportGenerator_Fields_Format_Filter_selector.png)
+
+## Report Type Selection
+
+The first step is choosing the report type. Each report type is designed for a specific operational need.
+
+### Donor Enrollment Report
+
+This report is used when staff need donor registration and enrollment details.
+
+It helps to:
+
+- view newly registered donors
+- check demographic and contact details
+- review donor registration trends
+
+![Donor Enrollment Report overview](/screens/tools-utilities/report-genertor/DonorEnrollmentReport_Overview.png)
+
+### Donation Report
+
+This report is used to review donation transactions and donation history.
+
+It helps to:
+
+- view donation records
+- check collection details
+- filter donations by blood group, component type, location, or collector
+
+![Donation Report overview](/screens/tools-utilities/report-genertor/DonationReport_Overview.png)
+
+### Inventory Report
+
+This report is used to review stock and blood unit availability.
+
+It helps to:
+
+- track blood stock levels
+- review expiry information
+- check screening and quarantine status
+- monitor component availability
+
+![Inventory Report overview](/screens/tools-utilities/report-genertor/InventoryReport_Overview.png)
+
+## Report Fields
+
+The **Report Fields** section controls which columns will appear in the final report.
+
+Staff can use the field chips to turn columns on or off before generating the report.
+
+| Field Control | Description |
+| --- | --- |
+| Field Chips | Each field appears as a selectable chip |
+| Selected Count | Shows how many fields are currently selected |
+| All | Selects all available fields at once |
+| Clear | Removes all selected fields |
+
+At least one field must be selected before the report can be generated.
+
+### Donor Enrollment Fields
+
+- DRN ID
+- Donor Name
+- Age
+- Gender
+- Blood Group
+- Phone
+- Email
+- City
+- State
+- Country
+- Pincode
+- Address
+- Last Donation Date
+- Registration Date
+- Registration Source
+- Status
+
+### Donation Fields
+
+- Unit ID
+- DRN ID
+- Donor Name
+- Blood Group
+- Component Type
+- Volume (mL)
+- Collection Date
+- Expiry Date
+- Unit Status
+- Collecting Location
+- Collected By
+- Donation Source
+
+### Inventory Fields
+
+- Unit ID
+- DIN
+- Donor DRN ID
+- Donor Name
+- Blood Group
+- Component Type
+- Volume (mL)
+- Collection Date
+- Expiry Date
+- Unit Status
+- Unit State
+- Screened
+- Quarantined
+- Tested At
+- Storage Location
+- Collected By
+
+## Export Format
+
+The **Export Format** section decides how the report will be downloaded.
+
+| Format | Description |
+| --- | --- |
+| PDF | Best for print-ready output with a formatted document layout |
+| Excel | Best for editing, sorting, and analysis in spreadsheet tools |
+| CSV | Best for lightweight raw data export and system import |
+
+Only one export format should be selected at a time.
+
+## Filters
+
+The **Filters** section helps narrow down the data before report generation.
+
+The available filters change based on the selected report type.
+
+### Donor Enrollment Filters
+
+- Registration From Date - start date for donor registration
+- Registration To Date - end date for donor registration
+- Donor Status - status values such as active or registration pending
+- Donor Source Type - donor source such as internal or public registration
+- Has Donation History - include only donors who have donation history
+
+These filters help staff find the exact donor records they need.
+
+### Donation Filters
+
+- Donation From Date - start collection date
+- Donation To Date - end collection date
+- Blood Group - filter by blood group
+- Component Types - filter by component type
+- Unit Status - filter by donation unit status
+- Source Types - filter by donation source type
+- Collection Locations - filter by collection location
+- Collected By - filter by the staff member who collected the donation
+
+These filters are useful when reviewing donation activity for a particular time period or team.
+
+### Inventory Filters
+
+- Inventory From Date - start collection date for inventory records
+- Inventory To Date - end collection date for inventory records
+- Blood Group - filter inventory units by blood group
+- Component Type - filter by blood component
+- Unit State - filter by the current state of the unit
+- Screened - include screened units only
+- Quarantined - include quarantined units only
+- Collection Location - filter by collection location
+
+These filters help staff review stock, screening status, and storage conditions.
+
+## Generate Report
+
+After selecting the report type, fields, export format, and filters, the user clicks **Generate Report**.
+
+### What happens next
+
+1. The system checks the selected fields and filter values
+2. The report request is created
+3. The report is processed in the selected format
+4. The completed file appears in **Recent Reports**
+
+If no matching data is found, the system will not create an empty report. The user must adjust the filters and try again.
+
+## Recent Reports
+
+The **Recent Reports** section shows the latest generated reports.
+
+Staff can use it to review report history and download files again whenever needed.
+
+![Recent Reports](/screens/tools-utilities/report-genertor/ReportGenerator_RecentReports.png)
+
+| Column | Description |
+| --- | --- |
+| Report Type | The kind of report that was generated |
+| Data | The number of rows included in the report |
+| Generated | The date and time the report was created |
+| Status | The current report status |
+| Format | Output format such as PDF, Excel, or CSV |
+| Action | Download option for the generated file |
+
+### How to use it
+
+1. Review the report type and row count
+2. Check whether the status is completed
+3. Confirm the format before downloading
+4. Click **Download** to get the file
+
+## Generated Report Outputs
+
+Each export format produces a different output style based on the selected fields and filters.
+
+### PDF Report
+
+The PDF output is formatted for viewing and printing.
+
+It usually includes:
+
+- organization name and contact details
+- report title
+- generated date and time
+- total record count
+- summary section
+- data table with selected fields
+- footer with page number and report metadata
+
+![PDF report preview](/screens/tools-utilities/report-genertor/ReportGenerator_pdfreport.png)
+
+### Excel Report
+
+The Excel output is a spreadsheet-friendly version of the report.
+
+It is useful when staff need to:
+
+- sort or filter the data further
+- copy report data into another worksheet
+- perform detailed analysis outside the system
+
+![Excel report preview](/screens/tools-utilities/report-genertor/ReportGenerator_excelreport.png)
+
+### CSV Report
+
+The CSV output is a plain tabular export of the selected report data.
+
+It is useful when staff need:
+
+- lightweight data export
+- import into another application
+- raw values with minimal formatting
+
+![CSV report preview](/screens/tools-utilities/report-genertor/ReportGenerator_csvreport.png)
+
+## Step-by-Step Workflow
+
+Use this sequence to generate a report from start to finish:
+
+1. Open the **Report Generator** page
+2. Select the required **Report Type**
+3. Choose the report **Fields**
+4. Pick the **Export Format**
+5. Apply the relevant **Filters**
+6. Click **Generate Report**
+7. Wait for the report to finish processing
+8. Open **Recent Reports**
+9. Click **Download** to retrieve the file
+
+## Important Notes
+
+| Note | Description |
+| --- | --- |
+| At least one field | At least one field must be selected before generating a report |
+| Filter availability | Available filters depend on the selected report type |
+| PDF use | PDF is best for print-ready reports |
+| Excel use | Excel is best for spreadsheet review |
+| CSV use | CSV is best for raw data exchange |
+| Re-download | Generated reports can be downloaded again from **Recent Reports** |
+| No data found | If the selected filters return no records, the system will not generate the report |
+

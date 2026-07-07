@@ -1,0 +1,246 @@
+---
+title: Donation Reminder
+description: Help staff identify eligible donors and send donation reminders through configured communication channels.
+---
+
+The Donation Reminder page helps staff find donors who are ready for a reminder, review their donation summary, and send notifications through the channels allowed by the organization.
+
+![Donation Reminder overview](/screens/tools-utilities/donation-reminder/DonationReminder_Overview.png)
+
+## Overview
+
+The Donation Reminder module is used to identify eligible donors and send reminders in a simple, guided workflow.
+
+Staff can use it to:
+
+- filter donors based on blood group and last donation history
+- review summary information before sending a reminder
+- select one or more eligible donors
+- send reminders through the configured communication channel
+
+## Purpose
+
+This page is used to support donor follow-up and reminder communication.
+
+It helps staff:
+
+- find donors who have crossed the required donation gap
+- narrow the donor list using the available filters
+- verify reminder details before sending
+- send messages through WhatsApp, SMS, or Email depending on organization settings
+
+## Page Layout
+
+The page is arranged in three main areas:
+
+<table>
+  <thead>
+    <tr>
+      <th>Area</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Filter Criteria</strong></td>
+      <td>Used to control which donors appear in the eligible donor list.</td>
+    </tr>
+    <tr>
+      <td><strong>Donation Summary</strong></td>
+      <td>Shows a quick snapshot of the current filter result.</td>
+    </tr>
+    <tr>
+      <td><strong>Eligible Donor List</strong></td>
+      <td>Displays the donors who match the selected criteria and are ready for reminders.</td>
+    </tr>
+  </tbody>
+</table>
+
+The layout helps staff filter donors first, review the summary, and then send reminders to the correct donors.
+
+## Filter Criteria
+
+The Filter Criteria panel controls which donors appear in the eligible donor list.
+
+![Filter Criteria and Donation Summary](/screens/tools-utilities/donation-reminder/DonationReminder_FilterCreteria_DonationSummary.png)
+
+<table>
+  <thead>
+    <tr>
+      <th>Filter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Blood Group</strong></td>
+      <td>Used to focus on one blood group or view all blood groups together.</td>
+    </tr>
+    <tr>
+      <td><strong>Days Since Last Donation</strong></td>
+      <td>Used to set how many days should pass since the donor’s last donation before the donor becomes eligible for a reminder.</td>
+    </tr>
+    <tr>
+      <td><strong>Send Via</strong></td>
+      <td>Used to choose the reminder channel or channels for sending the message.</td>
+    </tr>
+  </tbody>
+</table>
+
+Only the reminder channels configured by the organization will appear in the **Send Via** dropdown.
+
+## Donation Summary
+
+The Donation Summary panel gives a quick snapshot of the current filter result.
+
+<table>
+  <thead>
+    <tr>
+      <th>Summary Card</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Eligible Donors</strong></td>
+      <td>Shows how many donors match the selected filter criteria.</td>
+    </tr>
+    <tr>
+      <td><strong>Blood Group</strong></td>
+      <td>Shows the blood group currently selected in the filter.</td>
+    </tr>
+    <tr>
+      <td><strong>Days Since Donation</strong></td>
+      <td>Shows the selected waiting period used to decide donor eligibility.</td>
+    </tr>
+    <tr>
+      <td><strong>Reminder Channels</strong></td>
+      <td>Shows the active channels that can be used to send reminders.</td>
+    </tr>
+  </tbody>
+</table>
+
+This summary helps staff confirm the filter before sending reminders.
+
+## Eligible Donor List
+
+The Eligible Donor List shows the donors who match the selected filter criteria.
+
+![Eligible Donor List](/screens/tools-utilities/donation-reminder/DonationReminder_EgligibleDonorList.png)
+
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Donor ID</strong></td>
+      <td>Unique identifier for the donor.</td>
+    </tr>
+    <tr>
+      <td><strong>Name</strong></td>
+      <td>Donor name.</td>
+    </tr>
+    <tr>
+      <td><strong>Blood Group</strong></td>
+      <td>Donor blood group.</td>
+    </tr>
+    <tr>
+      <td><strong>Last Donation</strong></td>
+      <td>Date of the donor’s most recent donation.</td>
+    </tr>
+    <tr>
+      <td><strong>Days Since Last Donation</strong></td>
+      <td>Number of days since the donor last donated.</td>
+    </tr>
+    <tr>
+      <td><strong>Email</strong></td>
+      <td>Donor email address.</td>
+    </tr>
+    <tr>
+      <td><strong>Phone</strong></td>
+      <td>Donor mobile number.</td>
+    </tr>
+  </tbody>
+</table>
+
+Staff can select one donor or multiple donors from this list before sending reminders.
+
+## Send Reminders
+
+After selecting the required donors, staff can send reminders through the chosen channel or channels.
+
+![Send Reminders](/screens/tools-utilities/donation-reminder/DonationReminder_SendReminder.png)
+
+### Reminder workflow
+
+1. Apply the desired filters.
+2. Review the eligible donor list.
+3. Select one or more donors.
+4. Choose the reminder channel or channels.
+5. Click **Send Reminders**.
+
+This sends the reminder to the selected donors using the configured communication method.
+
+## Reminder Channel Configuration
+
+Reminder channels are controlled from Settings. Only channels enabled by the organization will be available in the Donation Reminder page.
+
+![Reminder channel settings](/screens/tools-utilities/donation-reminder/DonationReminder_settings.png)
+
+![Configured channels in dropdown](/screens/tools-utilities/donation-reminder/DonationReminder_Channel_FromSettings.png)
+
+<table>
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Settings Configuration</strong></td>
+      <td>Organization administrators choose which reminder channels are enabled.</td>
+    </tr>
+    <tr>
+      <td><strong>Send Via Dropdown</strong></td>
+      <td>Shows only the configured channels, so staff can use only the allowed options.</td>
+    </tr>
+    <tr>
+      <td><strong>Supported Channels</strong></td>
+      <td>Reminders can be sent through WhatsApp, SMS, or Email depending on the organization configuration.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Important Notes
+
+<table>
+  <thead>
+    <tr>
+      <th>Note</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Use the filters first</strong></td>
+      <td>The donor list updates based on the selected blood group and donation gap.</td>
+    </tr>
+    <tr>
+      <td><strong>Check the summary</strong></td>
+      <td>Review the summary cards before sending reminders to confirm the correct donor group.</td>
+    </tr>
+    <tr>
+      <td><strong>Only configured channels appear</strong></td>
+      <td>The Send Via dropdown shows only the channels enabled in Settings.</td>
+    </tr>
+    <tr>
+      <td><strong>Review before sending</strong></td>
+      <td>Always verify the selected donors and channels before clicking Send Reminders.</td>
+    </tr>
+  </tbody>
+</table>

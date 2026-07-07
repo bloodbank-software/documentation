@@ -1,0 +1,200 @@
+---
+title: Blood Group Statistics
+description: View inventory health across all blood groups from a single read-only screen.
+---
+
+The Blood Group Statistics page provides a quick summary of the current inventory status across all supported blood groups.
+
+It helps users monitor stock availability, identify low-stock blood groups, and review overall inventory health from one screen.
+
+<Note title="Read Only" type="note">
+  This page is for viewing statistics only. It does not support add, edit, or delete actions.
+</Note>
+
+![Blood Group Statistics overview](/screens/tools-utilities/bloodgroup-statistics/BloodGroup_Statistics.png)
+
+## Overview
+
+The Blood Group Statistics page is used to review blood inventory health in a simple, read-only format.
+
+Users can quickly see which blood groups are well stocked, which ones are low, and how many units are currently available or expired.
+
+## Purpose
+
+This page is used for inventory monitoring and decision-making.
+
+It helps users understand:
+
+- how many blood units are currently available
+- how many units are expired
+- which blood groups are running low
+- which blood groups are healthy and sufficiently stocked
+
+<Note title="Why this page matters" type="success">
+  The data on this page helps staff plan collection, watch stock levels, and identify shortages early.
+</Note>
+
+## Page Layout
+
+The page is divided into three main areas:
+
+- top summary cards that show overall inventory figures
+- a detailed blood group statistics table
+- a warning area that highlights low-stock blood groups
+
+<table>
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Summary Cards</strong></td>
+      <td>Show the overall inventory picture in a quick, easy-to-read format.</td>
+    </tr>
+    <tr>
+      <td><strong>Statistics Table</strong></td>
+      <td>Breaks the inventory down by blood group so users can review each group separately.</td>
+    </tr>
+    <tr>
+      <td><strong>Low Stock Alert</strong></td>
+      <td>Highlights blood groups that need attention because the stock is running low.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Summary Cards
+
+The top section contains summary cards that give a high-level view of the inventory.
+
+<table>
+  <thead>
+    <tr>
+      <th>Card</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Total Units</strong></td>
+      <td>Shows the total number of blood units currently recorded in inventory across all blood groups.</td>
+    </tr>
+    <tr>
+      <td><strong>Available</strong></td>
+      <td>Shows the number of units that are currently available for use.</td>
+    </tr>
+    <tr>
+      <td><strong>Low Stock</strong></td>
+      <td>Shows how many blood groups are currently below the expected stock threshold.</td>
+    </tr>
+    <tr>
+      <td><strong>Expired</strong></td>
+      <td>Shows the number of blood units that have expired and are no longer usable.</td>
+    </tr>
+  </tbody>
+</table>
+
+These cards help users monitor inventory health at a glance.
+
+## Blood Group Statistics Table
+
+The table below gives a blood-group-wise breakdown of inventory.
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Blood Group</strong></td>
+      <td>Displays the blood group name, such as A-, A+, B+, O+, and others.</td>
+    </tr>
+    <tr>
+      <td><strong>Total Units</strong></td>
+      <td>Shows the total number of units available for that blood group.</td>
+    </tr>
+    <tr>
+      <td><strong>Available</strong></td>
+      <td>Shows how many units are available for issue or further workflow steps.</td>
+    </tr>
+    <tr>
+      <td><strong>Expired</strong></td>
+      <td>Shows how many units for that blood group are expired.</td>
+    </tr>
+    <tr>
+      <td><strong>Issued</strong></td>
+      <td>Shows how many units have already been issued.</td>
+    </tr>
+    <tr>
+      <td><strong>Stock Percent</strong></td>
+      <td>Displays the stock health for that blood group as a percentage and status label.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Stock Status Labels
+
+Each blood group is marked with a status label based on stock availability.
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Healthy</strong></td>
+      <td>This means the blood group currently has sufficient usable units.</td>
+    </tr>
+    <tr>
+      <td><strong>Critical</strong></td>
+      <td>This means the blood group is running low and may need attention soon.</td>
+    </tr>
+  </tbody>
+</table>
+
+These labels help users understand inventory health without reviewing every unit manually.
+
+## Low Stock Alert
+
+When one or more blood groups fall below the desired threshold, the page shows a low-stock alert at the bottom.
+
+<Note title="Low Stock Alert" type="warning">
+  Use this warning to quickly identify blood groups that may need collection planning or replenishment.
+</Note>
+
+## Important Notes
+
+<table>
+  <thead>
+    <tr>
+      <th>Note</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>View Only</strong></td>
+      <td>This page is only for viewing statistics and does not support create, update, or delete actions.</td>
+    </tr>
+    <tr>
+      <td><strong>Inventory Planning</strong></td>
+      <td>The data is intended for stock monitoring and planning, not for record maintenance.</td>
+    </tr>
+    <tr>
+      <td><strong>Review Regularly</strong></td>
+      <td>Users should check this page often to identify shortages early.</td>
+    </tr>
+    <tr>
+      <td><strong>Alert First</strong></td>
+      <td>Pay attention to low-stock and critical labels so action can be taken before stock runs out.</td>
+    </tr>
+  </tbody>
+</table>
