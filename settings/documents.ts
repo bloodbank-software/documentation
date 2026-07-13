@@ -26,6 +26,88 @@ export const Documents: Paths[] = [
     ],
   },
   {
+    heading: 'Donor Management',
+    title: 'Donor Management',
+    href: '/donor-management',
+    noLink: true,
+    items: [
+      {
+        title: 'Overview',
+        href: '',
+      },
+      {
+        title: 'Donor Records',
+        href: '/donor-records',
+        noLink: true,
+        items: [
+          {
+            title: 'Donor Listing',
+            href: '/donor-listing',
+          },
+          {
+            title: 'Search',
+            href: '/search',
+          },
+          {
+            title: 'Filters & Saved Filters',
+            href: '/filters-saved-filters',
+          },
+          {
+            title: 'Add Donor',
+            href: '/add-donor',
+          },
+          {
+            title: 'Edit Donor',
+            href: '/edit-donor',
+          },
+          {
+            title: 'Delete Donor',
+            href: '/delete-donor',
+          },
+          {
+            title: 'Messaging',
+            href: '/messaging',
+          },
+        ],
+      },
+      {
+        title: 'Donor Details',
+        href: '/donor-details',
+        noLink: true,
+        items: [
+          {
+            title: 'Overview',
+            href: '',
+          },
+          {
+            title: 'Donation Tab',
+            href: '/donation-tab',
+          },
+          {
+            title: 'Communication Tab',
+            href: '/communication-tab',
+          },
+          {
+            title: 'Notes Tab',
+            href: '/notes-tab',
+          },
+          {
+            title: 'Contact Tab',
+            href: '/contact-tab',
+          },
+          {
+            title: 'Address Tab',
+            href: '/address-tab',
+          },
+        ],
+      },
+      {
+        title: 'Important Notes',
+        href: '/important-notes',
+      },
+    ],
+  },
+  {
     heading: 'Master Data',
     title: 'Master Data',
     href: '/master-data',

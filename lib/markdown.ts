@@ -116,7 +116,9 @@ function stripLeadingTitleHeading(rawMdx: string) {
     return { content: rawMdx }
   }
 
-  const fallbackRegex = new RegExp(String.raw`^#\s+${escapeRegExp(String(title))}\s*(?:\r?\n)+`)
+  const fallbackRegex = new RegExp(
+    String.raw`^\s*#\s+${escapeRegExp(String(title))}\s*(?:\r?\n)+`
+  )
   const cleanedContent = parsed.content.replace(fallbackRegex, '')
 
   return {
