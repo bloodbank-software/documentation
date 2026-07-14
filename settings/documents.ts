@@ -142,12 +142,20 @@ export const Documents: Paths[] = [
         href: '/lab-technicians',
       },
       {
+        title: 'Medical Officer',
+        href: '/medical-officer',
+      },
+      {
         title: 'Blood Groups',
         href: '/blood-groups',
       },
       {
         title: 'Blood Component Types',
         href: '/component-types',
+      },
+      {
+        title: 'Rejection Reason',
+        href: '/rejection-reason',
       },
       {
         title: 'Returns & Discards Reasons',
