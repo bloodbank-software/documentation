@@ -9,7 +9,7 @@ export const Documents: Paths[] = [
     items: [
       {
         title: "Overview",
-        href: "#overview",
+        href: "",
       },
       {
         title: "Key Features",
@@ -33,7 +33,7 @@ export const Documents: Paths[] = [
     items: [
       {
         title: "Overview",
-        href: "#overview",
+        href: "",
       },
       {
         title: "Donor Records",
@@ -77,7 +77,7 @@ export const Documents: Paths[] = [
         items: [
           {
             title: "Overview",
-            href: "#overview",
+            href: "",
           },
           {
             title: "Donation Tab",
@@ -115,7 +115,7 @@ export const Documents: Paths[] = [
     items: [
       {
         title: "Overview",
-        href: "#overview",
+        href: "",
       },
       {
         title: "User Management",
@@ -194,5 +194,13 @@ export const Documents: Paths[] = [
         href: "/report-generator",
       },
     ],
+  },
+  {
+    title: "Screening & Testing",
+    href: "/screening-testing",
+  },
+  {
+    title: "Transfer Blood Units",
+    href: "/transfer-blood-units",
   },
 ];

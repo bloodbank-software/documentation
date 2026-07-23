@@ -28,7 +28,7 @@ export function SubLink(props: Paths & { level: number; isSheet: boolean }) {
   const { title, href, items, noLink, level, isSheet } = props
 
   const Comp = (
-    <Anchor activeClassName="text-primary text-sm font-semibold" href={href}>
+    <Anchor activeClassName="text-primary text-sm font-bold" href={href}>
       {title}
     </Anchor>
   )

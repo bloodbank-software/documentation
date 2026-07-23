@@ -1,0 +1,190 @@
+---
+title: Transfer Blood Units
+description: >-
+  Record blood units that are transferred from inventory to another
+  destination such as a hospital or blood bank.
+---
+
+The **Transfer Blood Units** module is used to record blood units that are moved from the blood bank inventory to another destination, such as a partner hospital or another blood bank.
+
+This module is closely connected to the **Inventory** module. Users usually start the transfer process from a stored blood unit inside the inventory details page and then complete the transfer details in this module.
+
+## Overview
+
+This page shows the list of blood units that have already been transferred.
+
+From this page, users can:
+
+- view previously transferred blood units
+- search by unit ID
+- scan a QR code or search using the last digits of the unit ID
+- filter records by blood group
+- open the transfer details page
+- review transfer history in one place
+
+![Transfer Blood Units overview listing](/screens/transfer-blood-units/TransferBloodUnit_Overview_Listing.png)
+
+## Purpose
+
+The purpose of this module is to maintain a proper record of blood units that leave the inventory and are transferred to another location.
+
+It helps the team:
+
+- track where a blood unit was sent
+- record the transfer reason
+- maintain transfer history
+- verify the transferee and destination
+- keep inventory and movement records accurate
+
+## Page Layout
+
+The Transfer Blood Units page is arranged into the following areas:
+
+- page title and module heading
+- blood group quick filter buttons
+- search input for table data
+- unit ID search box
+- QR scan button
+- transferred records table
+- action column for opening transfer details
+- pagination at the bottom
+
+### Table Fields
+
+The table may include the following fields:
+
+- **Unit Id** - unique blood unit reference
+- **Blood Unit** - blood group, component type, and volume
+- **Transfer To** - destination name
+- **Destination Type** - destination category such as hospital or blood bank
+- **Transfer Reason** - reason for moving the unit
+- **Transferred Date** - date and time of transfer
+- **Transferred By** - user who performed the transfer
+- **Actions** - opens the transfer details page
+
+## Search and Filter Options
+
+This module provides multiple ways to find a record quickly.
+
+### Available Search Options
+
+- search by unit ID
+- search table data using the general search box
+- scan QR code
+- filter by blood group
+
+The module is designed to help users find the correct record even when many transfers are already stored.
+
+![Transfer Blood Units filters and search with QR scan](/screens/transfer-blood-units/TransferBlood_Filters_and_Search_ScanQRsearch.png)
+
+### How to Use Search and Filters
+
+1. Open the **Transfer Blood Units** page.
+2. Use the blood group buttons to filter the list.
+3. Type a unit ID in the unit search field if required.
+4. Use the table search box to narrow down the visible records.
+5. Click **Scan QR** if you want to search using a QR code.
+6. Review the filtered list to find the required record.
+
+## Transfer Action from Inventory
+
+A blood unit can be transferred from the **Inventory** module when the unit is available in stored status.
+
+The transfer action appears inside the inventory blood details page.
+
+### What the User Sees
+
+- the blood unit details page
+- an action button named **Transfer**
+- current unit status
+- audit trail and status history
+- movement or event timeline
+
+![Transfer action available in inventory details](/screens/transfer-blood-units/TranferBloodUnit_Actions_avaialbleforstoredblood_in_Inventory_details_page.png)
+
+### How to Start a Transfer from Inventory
+
+1. Open the **Inventory** module.
+2. Select the stored blood unit.
+3. Review the unit details carefully.
+4. Click the **Transfer** action button.
+5. The transfer form opens for the selected unit.
+6. Enter the transfer details and save the record.
+
+## Transfer Blood Unit Form
+
+The transfer form is used to enter the destination and handling details for the selected blood unit.
+
+This form typically includes:
+
+- destination type
+- destination name
+- transfer reason
+- transfer date and time
+- remarks or handling instructions
+- transfer button
+- cancel button
+
+![Transfer Blood Unit form](/screens/transfer-blood-units/TransferBloodUnit_Form.png)
+
+### Fields and What to Enter
+
+- **Destination Type** - choose where the unit is being transferred, such as hospital or blood bank
+- **Hospital / Blood Bank** - select the receiving destination
+- **Transfer Reason** - enter the reason for transfer
+- **Transfer Date & Time** - select when the transfer happened
+- **Remarks / Handling Instructions** - enter any special instructions for transport or handling
+
+### How to Transfer a Blood Unit
+
+1. Open a stored blood unit from **Inventory**.
+2. Click **Transfer**.
+3. Select the destination type.
+4. Choose the destination name.
+5. Enter the transfer reason.
+6. Select the transfer date and time.
+7. Add remarks if needed.
+8. Review all details carefully.
+9. Click **Transfer** to save the record.
+
+## Transfer Details Page
+
+After the transfer is saved, the transfer details page shows the full movement record for that unit.
+
+This page helps users review:
+
+- unit information
+- transfer destination
+- transfer reason
+- transfer status
+- audit trail and timeline
+- who performed the transfer
+- changes in unit state after transfer
+
+![Transfer Blood Unit details page](/screens/transfer-blood-units/TransferBlood_Details_Page.png)
+
+### What This Page Shows
+
+- the blood unit reference
+- current unit state
+- unit information card
+- audit trail and status history
+- event timeline
+- transfer notes and tracking details
+
+### How to Use the Details Page
+
+1. Open the transferred unit from the transfer list.
+2. Review the unit summary shown on the left side.
+3. Check the audit trail and event timeline on the right side.
+4. Verify the transfer reason and movement history.
+5. Use this page to confirm that the transfer was completed correctly.
+
+## Important Notes
+
+- Only stored or eligible inventory units should be transferred.
+- Always verify the destination before confirming the transfer.
+- Make sure the transfer reason is accurate and clear.
+- The transfer history should match the inventory movement records.
+- QR search is useful when the unit ID is not typed manually.
+- Use the details page to confirm the unit’s final transfer state.

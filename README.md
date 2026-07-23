@@ -1,144 +1,193 @@
-# Documents
+# Blood Bank System Documentation
 
-Documents is a modern documentation starter kit built with **Next.js**, **React**, **Tailwind CSS**, and **TypeScript**. Designed for businesses, product teams, and technical writers, it provides a scalable and efficient foundation for building documentation websites, product manuals, and knowledge bases.
+This repository contains the end-user documentation for the Blood Bank Management System.
 
-> **Demo**: [https://rubix-documents.vercel.app](https://rubix-documents.vercel.app)
+The purpose of this documentation is to explain the application in a clear, simple, and structured way so that users, testers, and stakeholders can understand how each module works without needing developer-level knowledge.
 
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Top Language](https://img.shields.io/github/languages/top/rubixvi/rubix-documents)](https://github.com/rubixvi/rubix-documents)
+## About This Documentation
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/rubixvi/rubix-documents)
-[![Last Commit](https://img.shields.io/github/last-commit/rubixvi/rubix-documents)](https://github.com/rubixvi/rubix-documents/commits)
-[![GitHub issues](https://img.shields.io/github/issues/rubixvi/rubix-documents)](https://github.com/rubixvi/rubix-documents/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/rubixvi/rubix-documents)](https://github.com/rubixvi/rubix-documents/pulls)
+The Blood Bank Management System is a web-based platform used to manage blood bank operations such as:
 
-[![GitHub stars](https://img.shields.io/github/stars/rubixvi/rubix-documents)](https://github.com/rubixvi/rubix-documents/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/rubixvi/rubix-documents)](https://github.com/rubixvi/rubix-documents/network)
-[![GitHub repo size](https://img.shields.io/github/repo-size/rubixvi/rubix-documents)](https://github.com/rubixvi/rubix-documents)
+- donor registration and donor profile management
+- donation records and donor communication
+- inventory and stock tracking
+- user management and access control
+- master data configuration
+- report generation and export
+- reminder, notification, and messaging workflows
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Frubixvi%2Frubix-documents&project-name=my-documents&repository-name=my-documents&demo-title=Documents&demo-description=This%20Document%20Starter%20Kit%20is%20developed%20with%20Next.js%2C%20Tailwind%20CSS%20and%20TypeScript.%20It%20serves%20as%20a%20flexible%20and%20scalable%20foundation%20for%20building%20documentation%20websites%20or%20content-driven%20projects.&demo-url=https%3A%2F%2Frubix-documents.vercel.app%2F&demo-image=https%3A%2F%2Fgithub.com%2Frubixvi%2Frubix-documents%2Fblob%2Fmain%2Fpublic%2Fscreens%2Fscreen-1.png)
+This documentation is written for end users and project reviewers. It focuses on what the screen does, how to use it, and what each action means in the workflow.
+
+## Documentation Style
+
+All documentation pages should follow the same style:
+
+- start with a short overview
+- explain the purpose of the page or module
+- describe the screen layout and fields
+- explain actions available to the user
+- include step-by-step usage instructions
+- show screenshots in the correct order
+- add important notes where needed
+
+The language should be simple, clear, and user-friendly.
+
+## Documentation Structure
+
+The documentation is organized by major modules.
+
+### 1. Authentication
+Covers login, registration, OTP verification, forgot password, reset password, QR login, and related security flows.
+
+### 2. User Management
+Covers user listing, add user, edit user, delete user, role update, permission management, permission history, login history, and impersonation.
+
+### 3. Donor Management
+Covers donor listing, donor add/edit/delete, search, filters, saved filters, messaging, donor profile, donor details, contact details, address details, notes, communication history, and donation history.
+
+### 4. Report Generator
+Covers report generation, field selection, filter selection, export formats, recent reports, and report downloads.
+
+### 5. Master Data
+Covers the setup and maintenance data used across the system, such as:
+
+- collecting locations
+- partner blood banks
+- partner hospitals
+- medical officers
+- blood groups
+- blood component types
+- rejection reasons
+- return/discard reasons
+- any other reusable master records
+
+### 6. Inventory
+Covers blood inventory, storage tracking, blood units, storage buildings, storage zones, and related stock workflows.
+
+### 7. Donation Reminders and Messaging
+Covers reminder workflows, donor notifications, message sending, and communication actions used in donor follow-up.
+
+### 8. Other Operational Modules
+Covers lab testing, phlebotomists, lab technicians, donor questionnaire, blood request, blood allocation, settings, activity logs, organization info, and related workflow screens.
+
+## Documentation Guidelines
+
+When writing each page:
+
+- explain the page from the end-user point of view
+- avoid technical implementation details
+- do not include API, database, schema, or code-level information
+- explain the visible fields, buttons, tabs, dialogs, and actions
+- describe what happens after each action
+- mention validation or warnings when relevant
+- keep the tone professional and easy to follow
+
+## Screenshot Rules
+
+Use screenshots as the main visual reference for each section.
+
+Recommended rules:
+
+- one screenshot per section when possible
+- place the screenshot directly above or below the explanation for that section
+- name screenshots clearly and consistently
+- explain what the user sees in the screenshot
+- explain the purpose of the buttons, tabs, and dialogs shown in the screenshot
+
+Example naming style:
+
+- `DonorManagement_Overview.png`
+- `DonorManagement_Listing.png`
+- `DonorManagement_AddDonor.png`
+- `DonorManagement_EditDonor.png`
+- `DonorManagement_DeleteDonor.png`
+
+## Standard Page Format
+
+Each documentation page should generally follow this format:
+
+1. Overview
+2. Purpose
+3. Page Layout
+4. Actions Available
+5. Step-by-Step Usage
+6. Related Screens or Tabs
+7. Important Notes
+
+For modules that are more detailed, additional sections can be added, such as:
+
+- Add
+- Edit
+- Delete
+- Status Handling
+- Used In
+- Tabs and Subsections
+- Export / Download Behavior
+- Search / Filter Behavior
+
+## Suggested Module List
+
+The following modules can be documented in this project:
+
+- Authentication
+- User Management
+- Donor Management
+- Report Generator
+- Donation Reminders
+- Donor Messaging
+- Inventory Management
+- Blood Requests
+- Blood Allocation
+- Settings
+- Master Data
+- Organization Info
+- Activity Log
+- Lab Testing
+- Phlebotomist Management
+- Lab Technician Management
+- Donor Questionnaire
+- QR Tools
+
+## Writing Standard
+
+Use the following writing style throughout the documentation:
+
+- short, direct sentences
+- user-focused explanations
+- consistent section names
+- simple English
+- step-by-step instructions for actions
+- clear notes for important behavior
+
+Example tone:
+
+- “Click the Add button to create a new record.”
+- “The list shows the existing records in the system.”
+- “Use Edit to update the selected entry.”
+- “Use Delete only when the record is no longer required.”
+
+## Important Notes
+
+- This documentation is intended for end users and project stakeholders.
+- Keep content clean, structured, and easy to paste into GitHub.
+- Do not mix developer notes into the documentation pages.
+- If a module has multiple screens, document each screen separately in the same style.
+- If a module has tabs, explain each tab individually.
+
+## Project Goal
+
+The final documentation should help a reader understand:
+
+- what each module is for
+- how to navigate each screen
+- how to complete actions correctly
+- where each feature is used in the blood bank workflow
+- what the user should expect after performing an action
+
+## Contact / Ownership
+
+This documentation belongs to the Blood Bank Management System project and should be updated whenever a module changes.
 
 ---
 
-## Overview
-
-Documents enables businesses to deliver clear, structured, and accessible product documentation — with a focus on performance, usability, and maintainability.
-
-Built for technical and content-driven projects, this starter kit supports Markdown (MDX), React components, and a flexible content architecture designed for scale.
-
----
-
-## Features
-
-### Content Management
-
-- MDX support (Markdown with React components)
-- Reusable custom components
-- Mermaid.js for diagrams and flowcharts
-- Tables and LaTeX math support
-
-### Navigation & Structure
-
-- Multi-level navigation
-- Auto-generated table of contents
-- Content pagination
-- Code snippet switcher with copy functionality
-
-### Development Experience
-
-- Syntax highlighting with theme support
-- Enhanced code blocks with titles and line highlighting
-- Built-in light/dark mode with auto-detection
-- SEO-ready with dynamic meta tags
-
-### Search & Future Enhancements
-
-- Fuzzy search with term highlighting
-- Planned: AI-powered knowledgebase tools
-
----
-
-## Quick Start
-
-### Installation
-
-```bash
-git clone https://github.com/rubixvi/rubix-documents.git
-cd rubix-documents
-pnpm install
-pnpm generate-content-json
-pnpm run dev
-```
-
-Visit [http://localhost:3000](http://localhost:3000) to view your project locally.
-
-**For production:**
-
-```bash
-pnpm run build
-pnpm run start
-```
-
-Deploy to Vercel for automated builds and hosting.
-
----
-
-## Usage
-
-Documents is designed to support:
-
-- Product documentation
-- Technical manuals
-- Internal guides
-- Business knowledge bases
-
----
-
-## Screenshots
-
-![Main Screen](./public/screens/screen-1.png)
-_Main Screen_
-
-![Document Screen](./public/screens/screen-2.png)
-_Document Screen_
-
-![Document Footer](./public/screens/screen-3.png)
-_Document Footer_
-
-![Document Search](./public/screens/screen-4.png)
-_Document Search_
-
-![Main Dark Screen](./public/screens/screen-5.png)
-_Main Dark Mode Screen_
-
-![Document Dark Screen](./public/screens/screen-6.png)
-_Document Dark Mode Screen_
-
----
-
-## Contributing
-
-We welcome contributions to improve this project.
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Open a pull request
-
----
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
-
----
-
-## Contact
-
-For support or inquiries:
-
-Vincent Vu — [@rubixvi](https://x.com/rubixvi)
-
-Rubix Studios — [https://rubixstudios.com.au](https://rubixstudios.com.au)
-
-**Project:** [https://github.com/rubixvi/rubix-documents](https://github.com/rubixvi/rubix-documents)
+If needed, the next step is to create individual documentation pages for each module using the same format.
