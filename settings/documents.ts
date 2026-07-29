@@ -247,4 +247,12 @@ export const Documents: Paths[] = [
     title: "Blood Request",
     href: "/blood-request",
   },
+  {
+    title: "Donor Registration",
+    href: "/donor-registration",
+  },
+  {
+    title: "Logout",
+    href: "/logout",
+  },
 ];
