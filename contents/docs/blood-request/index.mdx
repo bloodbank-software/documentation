@@ -1,0 +1,431 @@
+---
+title: Blood Request
+description: Create, review, approve, issue, reject, and track patient blood requests.
+---
+
+# Blood Request
+
+The **Blood Request** module is used to manage patient blood requests from creation to final completion. It helps staff create new requests, review the request list, search and filter records, open request details, approve or reject requests, issue blood units, cancel issued allocations when needed, and track the status of each request.
+
+This is one of the most important workflow modules in the system because it connects patient demand with blood inventory allocation and fulfillment.
+
+## Overview
+
+The Blood Request module helps the team manage incoming requests for blood and blood components.
+
+From this module, users can:
+
+- create a new blood request
+- view all requests in a structured list
+- search and filter requests
+- review request details
+- approve or reject requests
+- issue blood units for approved requests
+- cancel issued allocations when required
+- track the request status from start to finish
+
+## Purpose
+
+The main purpose of the Blood Request module is to organize and track patient requests in a controlled workflow.
+
+Instead of handling requests manually, the system stores each request with its required blood group, component type, priority, units, and approval status. This helps the team respond quickly and maintain a proper audit trail.
+
+## Page Layout
+
+The Blood Request page usually contains:
+
+- a status tab row
+- a search bar
+- a request listing table
+- row-level actions
+- a button to add a new request
+- a request details view
+- allocation and approval summary sections
+- modal forms for actions such as approve, reject, edit, delete, and issue
+
+The layout is built to support the full request lifecycle from one screen flow.
+
+## Request Listing
+
+The listing page shows all blood requests in a tabular format.
+
+![Blood Request request list](/screens/blood-request/Blood_Request_Overview_List.png)
+
+### What This Screen Shows
+
+This screen shows:
+
+- request records in a table
+- patient or request name
+- request details such as units and blood group
+- required date and time
+- priority
+- request status
+- actions for each record
+- pagination controls
+
+### How to Use This Screen
+
+1. Open the **Blood Request** module.
+2. Review the request list.
+3. Check the request name and details.
+4. Look at the status before taking action.
+5. Use the action buttons to view, edit, approve, reject, or delete the request.
+
+### Why This Screen Matters
+
+This is the main screen used to monitor all blood requests in one place.
+
+## Status Tabs
+
+The module uses status tabs to separate requests by workflow stage.
+
+![Blood Request status tabs](/screens/blood-request/Blood_Request_Sinlge_List1.png)
+
+### Common Status Types
+
+- **Pending** - request is created and waiting for review
+- **Approved** - request has been approved
+- **Declined** - request has been rejected
+- **Partially Completed** - some units have been issued but the full request is not yet complete
+- **Completed** - all required units have been fulfilled
+- **Cancelled** - request or allocation has been cancelled
+
+### How to Use the Tabs
+
+1. Open the **Blood Request** page.
+2. Select the required status tab.
+3. Review only the requests in that state.
+4. Take action based on the status of the request.
+
+### Why This Matters
+
+The tabs help users quickly focus on the current stage of each request without scanning the entire list.
+
+## Search and Filter
+
+The search option helps users find a request quickly by name or request-related details.
+
+![Blood Request search and filter](/screens/blood-request/Blood_Request_Filter_and_Search.png)
+
+### What This Screen Shows
+
+This screen shows:
+
+- search bar
+- filtered request results
+- request list updated based on search input
+- status tabs and record counts
+
+### How to Use Search
+
+1. Open the **Blood Request** page.
+2. Enter the patient name, blood group, component, or another related keyword.
+3. Review the filtered results.
+4. Open the required request from the list.
+
+### Important Note
+
+Use search when the list is long or when you already know part of the request information.
+
+## Add Blood Request
+
+Use the add form to create a new blood request.
+
+![Add Blood Request form](/screens/blood-request/Blood_Request_Add_Form.png)
+
+### What This Form Shows
+
+This form includes:
+
+- patient name
+- contact number
+- blood group
+- component type
+- units required
+- required date and time
+- priority
+- reason
+- add and cancel actions
+
+### Field Guide
+
+| Field | Description |
+|---|---|
+| **Patient Name** | The name of the person requesting blood. |
+| **Contact Number** | Phone number used for communication. |
+| **Blood Group** | The blood group required for the request. |
+| **Component Type** | The blood component required, such as WB, RBC, FFP, or PLT. |
+| **Units Required** | Number of units needed. |
+| **Required Date & Time** | When the blood is needed. |
+| **Priority** | Urgency of the request, such as Normal or High. |
+| **Reason** | Reason for the blood request. |
+
+### How to Add a Blood Request
+
+1. Open the **Blood Request** module.
+2. Click **Add Blood Request**.
+3. Enter the patient name.
+4. Enter the contact number.
+5. Select the required blood group.
+6. Select the component type.
+7. Enter the number of units required.
+8. Choose the required date and time.
+9. Select the priority.
+10. Enter the reason for the request.
+11. Review the details carefully.
+12. Click **Add** to save the request.
+
+### Important Note
+
+Make sure the request details are correct before saving because the record will be used for approval and allocation.
+
+## View Request Details
+
+The view button opens the request details page.
+
+![View Request button](/screens/blood-request/Blood_Request_View_Button.png)
+
+### What This Action Shows
+
+This action gives access to the selected request’s detailed view.
+
+### How to Use This Action
+
+1. Find the required request in the list.
+2. Click the **View** icon.
+3. Open the request details page.
+4. Review the request summary, activity, and allocation information.
+
+## Request Details
+
+The request details page shows the selected blood request in a complete format.
+
+![Blood Request detailed view](/screens/blood-request/Blood_Request_Sinlge_List2.png)
+
+### What This Screen Shows
+
+This screen usually shows:
+
+- patient name
+- blood group
+- request status
+- required units
+- required date and time
+- priority
+- reason
+- request summary
+- activity or timeline section
+- approval information
+
+### What Users Review Here
+
+- allocation summary
+- lifecycle details
+- approval summary
+- request activity and status history
+
+### How to Use This Screen
+
+1. Open the request from the list.
+2. Review the full request information.
+3. Check the status and approval history.
+4. Use the available action buttons if the request still needs processing.
+
+### Why This Screen Matters
+
+This page is useful when users need to review one request in detail before approving, rejecting, or issuing blood.
+
+## Edit Blood Request
+
+Use the edit option when request details need to be corrected.
+
+![Edit Blood Request form](/screens/blood-request/Blood_Request_Edit.png)
+
+### What This Form Shows
+
+This form shows editable fields such as:
+
+- patient name
+- contact number
+- blood group
+- component type
+- units required
+- required date and time
+- priority
+- reason
+
+### How to Edit a Blood Request
+
+1. Open the request from the list.
+2. Click the **Edit** action.
+3. Update the required details.
+4. Review the changes carefully.
+5. Click **Update** to save the changes.
+
+### Important Note
+
+Edit should be used only when the request is still allowed to be changed according to its current status.
+
+## Approve Blood Request
+
+The approve action is used when the request is valid and can proceed to allocation.
+
+![Approve Blood Request form](/screens/blood-request/Blood_Request_Approve.png)
+
+### What This Form Shows
+
+This form includes:
+
+- units to allocate
+- allocation note
+- approve button
+- cancel button
+
+### How to Approve a Blood Request
+
+1. Open the required request.
+2. Click the **Approve** action.
+3. Enter the number of units to allocate.
+4. Add an allocation note if needed.
+5. Review the details.
+6. Click **Approve** to confirm the request.
+
+### Why This Step Matters
+
+Approval moves the request from pending review into the allocation process.
+
+## Approve and Issue
+
+Some requests can be approved and issued in a single flow.
+
+![Approve and Issue form](/screens/blood-request/Blood_Request_ApproveandIssue.png)
+
+### What This Form Shows
+
+This form usually includes:
+
+- allocation or issue confirmation
+- notes or remarks
+- approve and issue button
+- cancel button
+
+### How to Approve and Issue
+
+1. Open the required request.
+2. Click the **Approve & Issue** action.
+3. Enter the allocation or issue details.
+4. Add notes if required.
+5. Review the information carefully.
+6. Click **Approve & Issue** to complete the action.
+
+### Why This Step Matters
+
+This option is useful when the request can be fulfilled immediately after approval.
+
+## Reject Blood Request
+
+The reject action is used when the request cannot be fulfilled.
+
+![Reject Blood Request form](/screens/blood-request/Blood_Request_Rejection.png)
+
+### What This Form Shows
+
+This form includes:
+
+- rejection reason field
+- reject button
+- cancel button
+
+### How to Reject a Blood Request
+
+1. Open the required request.
+2. Click the **Reject** or **Decline** action.
+3. Enter the rejection reason.
+4. Review the reason carefully.
+5. Click **Reject** to confirm the action.
+
+### Important Note
+
+A rejection reason should always be entered so the team knows why the request was declined.
+
+## Issued Request and Cancel
+
+After a request is issued, it may still need to be cancelled in special cases.
+
+![Issued request details with cancel option](/screens/blood-request/Blood_Request_Issued_Cancel_.png)
+
+### What This Screen Shows
+
+This screen usually shows:
+
+- allocated unit details
+- fulfillment summary
+- lifecycle information
+- issued status
+- cancel action if available
+
+### How to Use This Screen
+
+1. Open the approved or issued request.
+2. Review the allocation summary.
+3. Check whether the request has been issued.
+4. If required, use the cancel option.
+5. Provide a cancellation reason when prompted.
+6. Confirm the action.
+
+### Why This Matters
+
+This helps the team manage cases where an issued request must be reversed or corrected.
+
+## Delete Blood Request
+
+The delete option removes an unwanted request record.
+
+![Delete Blood Request confirmation](/screens/blood-request/Blood_Request_Delete.png)
+
+### What This Dialog Shows
+
+This dialog usually includes:
+
+- warning message
+- cancel button
+- yes, delete button
+
+### How to Delete a Blood Request
+
+1. Find the required request in the list.
+2. Click the **Delete** action.
+3. Read the warning message carefully.
+4. Click **Yes, Delete** only if you are sure.
+5. Use **Cancel** if you do not want to remove the request.
+
+### Important Note
+
+Deleting a request should be done carefully because it removes the record from the workflow.
+
+## Status Flow
+
+Blood requests usually move through the following stages:
+
+1. **Pending** - request is created and waiting for review
+2. **Approved** - request is approved and can be allocated
+3. **Partially Completed** - some units have been issued
+4. **Completed** - full request has been fulfilled
+5. **Declined** - request has been rejected
+6. **Cancelled** - request or issue has been cancelled
+
+![Blood Request status history](/screens/blood-request/Blood_Request_Sinlge_List3.png)
+
+### Why This Status Flow Matters
+
+The status flow helps users understand where each request is in the process and what action can be taken next.
+
+## Important Notes
+
+- Always verify the blood group, component type, and required units before approving.
+- Enter a clear reason when rejecting or cancelling a request.
+- Use the correct status tab to find requests faster.
+- Review request details carefully before issuing blood.
+- Make sure the allocation details are correct before confirming approval or issue.
+- The Blood Request module is one of the core workflow modules in the system, so every action should be handled carefully.

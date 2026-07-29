@@ -118,6 +118,10 @@ export const Documents: Paths[] = [
         href: "",
       },
       {
+        title: "Organization",
+        href: "/organization",
+      },
+      {
         title: "User Management",
         href: "/user-management",
       },
@@ -196,11 +200,51 @@ export const Documents: Paths[] = [
     ],
   },
   {
+    heading: "Account Settings",
+    title: "Account Settings",
+    href: "/account-settings",
+    noLink: true,
+    items: [
+      {
+        title: "Overview",
+        href: "",
+      },
+      {
+        title: "User Profile",
+        href: "/user-profile",
+      },
+      {
+        title: "Change Password",
+        href: "/change-password",
+      },
+      {
+        title: "Permission History",
+        href: "/permission-history",
+      },
+      {
+        title: "Login History",
+        href: "/login-history",
+      },
+    ],
+  },
+  {
     title: "Screening & Testing",
     href: "/screening-testing",
   },
   {
     title: "Transfer Blood Units",
     href: "/transfer-blood-units",
+  },
+  {
+    title: "Discarded & Expired Units",
+    href: "/discarded-expired-units",
+  },
+  {
+    title: "Notification",
+    href: "/notification",
+  },
+  {
+    title: "Blood Request",
+    href: "/blood-request",
   },
 ];

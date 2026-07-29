@@ -1,0 +1,230 @@
+---
+title: Discarded & Expired Units
+description: >-
+  Review blood units that have expired or were discarded from active
+  inventory.
+---
+
+The **Discarded & Expired Units** module is used to track blood units that are no longer available for use in the active inventory.
+
+This module helps users review two important record types:
+
+- **Expired Units** - blood units that have reached or passed the expiry date
+- **Discarded Units** - blood units that have been removed from inventory after being marked as discarded
+
+The page keeps the expiry and discard lifecycle organized so that staff can review the full history of removed blood units in one place.
+
+## Overview
+
+This page provides a list-based view of blood units that are no longer active in inventory.
+
+From this page, users can:
+
+- switch between discarded and expired unit lists
+- search by unit ID or DIN
+- review blood unit details
+- track collection date, expiry date, unit state, and storage location
+- view who collected or removed the unit
+- open a unit to see the full details page
+- discard an expired unit when required
+
+![Discarded and expired units overview](/screens/discard-expired-blood-units/Discarded_Expired_Listing_Overview.png)
+
+## Purpose
+
+The purpose of this module is to keep a clear record of blood units that are no longer in active use.
+
+It helps the team:
+
+- identify units that have expired
+- review units that were discarded
+- trace when and why a unit left the active inventory
+- keep inventory records clean and accurate
+- maintain a proper history for audit and reference
+
+## What Are Expired Blood Units?
+
+A blood unit becomes **expired** when it reaches its expiry date while it is still in storage or quarantine.
+
+At that stage:
+
+- the unit is no longer suitable for use
+- it is no longer treated as an active stock item
+- the system moves it to the expired workflow
+- staff can review it and decide whether it must be discarded
+
+Expired units are usually identified automatically based on the expiry date and the unit’s current storage state.
+
+### When a Unit Becomes Expired
+
+A unit generally becomes expired when:
+
+1. the expiry date is reached
+2. the unit is still present in inventory
+3. the system updates its state to expired
+4. the record becomes available in the **Expired Units** tab
+
+After that, the unit may later be moved to the discarded list depending on the workflow used by the organization.
+
+## Page Layout
+
+The Discarded & Expired Units page is divided into these areas:
+
+- module title and description
+- tab selector for discarded and expired units
+- search field
+- records table
+- pagination controls
+- details page for selected units
+- discard action for expired units
+
+### Table Fields
+
+The list may include the following fields:
+
+- **Unit ID** - unique blood unit reference
+- **Blood Unit** - blood group, component type, and volume
+- **Collection Date** - date when the unit was collected
+- **Expiry Date** - expiry date of the unit
+- **Unit State** - current state such as discarded or expired
+- **Storage Location** - where the unit was kept
+- **Collected By** - person who collected the unit
+- **Discard Reason** - reason for discard, shown in discarded records
+- **Discarded At** - date when the unit was moved to discarded status
+
+## Discarded Units Tab
+
+The **Discarded Units** tab shows units that have already been discarded from inventory.
+
+These records are no longer part of active stock, but they remain visible for tracking and audit purposes.
+
+![Discarded units listing](/screens/discard-expired-blood-units/Discarded_Listing_Page.png)
+
+### What This Tab Shows
+
+- unit ID
+- blood unit summary
+- collection date
+- expiry date
+- unit state as discarded
+- storage details
+- collected by
+- discard reason
+- discarded date
+
+### How to Use This Tab
+
+1. Open the **Discarded & Expired Units** page.
+2. Click the **Discarded Units** tab.
+3. Review the list of discarded records.
+4. Use the search field if you need a specific unit.
+5. Open a unit to view its full details.
+
+## Expired Units Tab
+
+The **Expired Units** tab shows units that have crossed their expiry date but have not yet been moved into the discarded list.
+
+These records help staff identify which units need to be handled next.
+
+![Expired units listing](/screens/discard-expired-blood-units/Expired_Listing_Page.png)
+
+### What This Tab Shows
+
+- unit ID
+- blood unit summary
+- collection date
+- expiry date
+- unit state as expired
+- storage details
+- collected by
+
+### How to Use This Tab
+
+1. Open the **Discarded & Expired Units** page.
+2. Click the **Expired Units** tab.
+3. Review all expired records.
+4. Search for a specific unit if needed.
+5. Open the unit details page to review the discard option.
+
+## Search and Listing Behavior
+
+The search box helps users find a unit quickly by:
+
+- Unit ID
+- DIN
+- related table search text, depending on the page behavior
+
+The list is paginated, so users can move between pages if many records are available.
+
+### How to Search
+
+1. Open the required tab.
+2. Enter the unit ID or DIN in the search field.
+3. Review the filtered results.
+4. Clear the search if you want to return to the full list.
+
+## Discard Action for Expired Units
+
+Expired units can be opened from the list to view their details.
+
+Inside the details page, the system provides a **Discard** action for expired blood units.
+
+This action is used when the expired unit must be formally moved from expired state to discarded state.
+
+![Discard options for expired blood units](/screens/discard-expired-blood-units/Discard_Options_forExpiredBloodUnits.png)
+
+### How to Discard an Expired Unit
+
+1. Open the **Expired Units** tab.
+2. Select the required expired unit from the list.
+3. Open the unit details page.
+4. Click the **Discard** button.
+5. Review the discard confirmation or discard form.
+6. Enter the discard reason if required.
+7. Confirm the action to complete the discard process.
+
+## Discarded Details Page
+
+The discarded details page shows the full history of a discarded unit.
+
+This page helps users verify:
+
+- unit identity
+- current state
+- collection information
+- storage location
+- timeline of events
+- when the unit became expired
+- when the unit was discarded
+
+![Discarded details page](/screens/discard-expired-blood-units/Discarded_details_page.png)
+
+### What This Page Shows
+
+- unit card with blood group and component type
+- unit ID and barcode
+- collecting location
+- storage location
+- current status
+- audit trail
+- event timeline
+- related donor information
+- screening status summary
+
+### How to Use This Page
+
+1. Open a discarded unit from the discarded list.
+2. Review the unit summary on the left side.
+3. Check the audit trail and event timeline on the right side.
+4. Confirm the discard reason and discarded date.
+5. Use this page for audit or reference purposes.
+
+## Important Notes
+
+- Expired units are no longer suitable for use in active inventory.
+- A unit becomes expired when its expiry date is reached.
+- Discarded units are kept for history and audit tracking.
+- Always check the unit state before performing any action.
+- Use the discard action only for expired units that must be formally removed from stock.
+- Search is useful when there are many expired or discarded records.
+- The details page gives the clearest view of the full unit lifecycle.
