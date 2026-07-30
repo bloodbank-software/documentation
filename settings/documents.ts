@@ -200,6 +200,62 @@ export const Documents: Paths[] = [
     ],
   },
   {
+    heading: "Inventory",
+    title: "Inventory",
+    href: "/inventory",
+    noLink: true,
+    items: [
+      {
+        title: "Overview",
+        href: "",
+      },
+      {
+        title: "Dashboard",
+        href: "/dashboard",
+      },
+      {
+        title: "Blood Units List",
+        href: "/blood-units-list",
+      },
+      {
+        title: "Add Blood Unit",
+        href: "/add-blood-unit",
+      },
+      {
+        title: "Blood Unit Details",
+        href: "/blood-unit-details",
+      },
+      {
+        title: "Print Barcode & Actions",
+        href: "/print-barcode-actions",
+      },
+      {
+        title: "Transfer Blood Unit",
+        href: "/transfer-blood-unit",
+      },
+      {
+        title: "Discard & Expired",
+        href: "/discard-expired",
+      },
+      {
+        title: "Bulk Transfer",
+        href: "/bulk-transfer",
+      },
+      {
+        title: "Storage Units",
+        href: "/storage-units",
+      },
+      {
+        title: "Other Bank",
+        href: "/other-bank",
+      },
+      {
+        title: "Return",
+        href: "/return",
+      },
+    ],
+  },
+  {
     heading: "Account Settings",
     title: "Account Settings",
     href: "/account-settings",
