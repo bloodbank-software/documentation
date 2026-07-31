@@ -130,6 +130,10 @@ export const Documents: Paths[] = [
         href: "/roles-management",
       },
       {
+        title: "Blood Bank Settings",
+        href: "/blood-bank-settings",
+      },
+      {
         title: "User Management",
         href: "/user-management",
       },

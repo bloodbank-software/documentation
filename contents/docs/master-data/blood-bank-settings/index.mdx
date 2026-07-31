@@ -1,0 +1,179 @@
+---
+title: Blood Bank Settings
+description: Configure organization-level preferences that control registration, reminders, reports, and questionnaire rules.
+---
+
+# Blood Bank Settings
+
+Blood Bank Settings is used to configure important organization-level preferences for the blood bank system. It controls how registrations work, how reminders are sent, how reports are displayed, and how donor questionnaire rules are managed.
+
+## Overview
+
+This module is available under **Master Data** and helps administrators define the default behavior of the system.
+
+![Blood Bank Settings overview](/screens/master-data/blooodbank-settings/BloodBank_Settings_Overview.png)
+
+From this screen, users can manage settings such as:
+
+- registration approval rules
+- verification type
+- reminder channels
+- timezone
+- report header and footer content
+- donor questionnaire thresholds
+
+These settings help keep the system consistent for all users.
+
+## Page Layout
+
+The page contains a left navigation menu and a settings panel on the right.
+
+The main panel includes sections such as:
+
+- Registration and Verification Settings
+- Donation Reminder Settings
+- Organization Settings
+- Report Header and Footer Settings
+- Donor Questionnaire Settings
+
+Each section contains fields that can be viewed or updated depending on user access and system configuration.
+
+## Registration and Verification Settings
+
+The Registration and Verification Settings section controls how donor or user registration is handled.
+
+### Require Admin Approval for Registration
+
+This option determines whether new registrations must be approved by an administrator before they become active.
+
+- **Yes** - registrations must be reviewed and approved
+- **No** - registrations can continue without manual admin approval
+
+### Verification Type
+
+This setting controls how users verify their identity during registration.
+
+- **OTP Only** - verification is done using OTP
+- **OTP & Email** - verification is done using both OTP and email
+
+These settings help control the registration flow and security level of the system.
+
+## Donation Reminder Settings
+
+The Donation Reminder Settings section controls how reminder messages are sent to donors.
+
+### Reminder Channels
+
+This field lets the user choose the communication channels used for donation reminders.
+
+Examples of supported channels shown in the screen include:
+
+- WhatsApp
+- SMS
+- other available reminder methods
+
+The selected channels determine how the system sends reminder notifications.
+
+![Blood Bank Settings continuation page](/screens/master-data/blooodbank-settings/BloodBank_Settings_Overview_Continuation.png)
+
+## Organization Settings
+
+The Organization Settings section defines organization-wide preferences.
+
+### Timezone
+
+This field sets the default timezone used by the organization.
+
+The selected timezone affects how dates and times are shown across the system.
+
+The screenshot shows:
+
+- **IST (India Standard Time)** as the selected value
+
+This ensures that all time-based records follow the correct local timezone.
+
+## Report Header and Footer Settings
+
+The Report Header and Footer Settings section controls how reports are formatted and displayed.
+
+### Report Header HTML
+
+This field is used to define custom HTML content for the top of printed or exported reports.
+
+It supports formatted content so the organization can display its own branding or report header details.
+
+### Report Logo Position
+
+This field decides where the organization logo appears in the report header.
+
+The available position shown in the screen is:
+
+- **Right (default)**
+
+### Report Footer HTML
+
+This field is used to define the bottom part of the report.
+
+It can include text such as organization information, report title, or generated date.
+
+These report settings help make exported documents look consistent and professional.
+
+## Donor Questionnaire Settings
+
+The Donor Questionnaire Settings section contains rule-based values used during donor screening.
+
+### Minimum Hemoglobin Threshold (g/dL)
+
+This field defines the minimum hemoglobin level required for a donor to be accepted during medical assessment.
+
+The value shown in the screen is:
+
+- **12.5**
+
+This setting helps determine whether a donor meets the minimum medical requirement.
+
+It may also show:
+
+- minimum and maximum allowed values
+- the current configured value
+
+This allows administrators to keep the questionnaire rules aligned with clinical requirements.
+
+## Save and Reset Actions
+
+The bottom of the page contains action buttons used to manage changes.
+
+### Save
+
+This button saves the updated settings.
+
+### Reset
+
+This button clears unsaved changes and restores the previous values.
+
+The screen may also show a message such as:
+
+- **No changes to save**
+
+This means the current values already match the saved configuration.
+
+## How to Use This Module
+
+1. Open **Master Data > Blood Bank Settings**.
+2. Review the current organization settings shown on the page.
+3. Update registration and verification rules if needed.
+4. Select the reminder channels used for donation notifications.
+5. Confirm the organization timezone.
+6. Enter or update report header and footer content.
+7. Review the donor questionnaire threshold values.
+8. Click **Save** when the changes are ready.
+9. Use **Reset** if you want to discard unsaved changes.
+
+## Important Notes
+
+- These settings affect the entire blood bank system.
+- Registration approval and verification rules should be changed carefully.
+- Reminder channel settings control how users receive notifications.
+- Report header and footer text may appear in exported or printed documents.
+- The hemoglobin threshold is an important medical rule and should only be updated by authorized users.
+- Always review all settings before saving to avoid system-wide impact.
