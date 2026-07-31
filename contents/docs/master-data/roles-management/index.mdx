@@ -1,0 +1,192 @@
+---
+title: Roles Management
+description: Create roles and assign permissions for different parts of the Blood Bank system.
+---
+
+# Roles Management
+
+Roles Management is used to create user roles and assign permissions for different parts of the blood bank system. This helps control what each user can view, create, edit, delete, or manage inside the application.
+
+## Overview
+
+The Roles Management module is available under **Master Data** and is used by administrators to define access rights for users.
+
+From here, users can:
+
+- view the list of existing roles
+- create a new role
+- assign module-level permissions
+- enable or disable permissions for a role
+- review what each role can access in the system
+
+This module is an important part of access control because it helps keep the system secure and organized.
+
+![Roles Management overview](/screens/roles-management/Roles_Mgmnt_Overview.png)
+
+## Purpose
+
+The main purpose of this module is to manage system access in a structured way.
+
+Instead of giving the same access to everyone, the system allows different roles to have different permissions. For example, one role may only view records, while another role may create, edit, and manage users.
+
+This makes it easier to maintain security and ensures each user only sees the features they are allowed to use.
+
+## Page Layout
+
+The Roles Management page usually contains:
+
+- a page title at the top
+- an **Add Role** button
+- role summary information
+- a list of system roles
+- module cards showing permissions for each section
+- search functionality for permissions
+
+### Field Guide
+
+| Field / Control | Meaning |
+|---|---|
+| **Role Name** | Name of the role being created, such as `Sub-Admin`, `Supervisor`, or `Reviewer`. |
+| **Add Role** | Opens the form used to create a new role. |
+| **Module cards** | Each card represents one application area. |
+| **Permission count** | Shows how many permissions are active out of the total available. |
+| **Toggle switch** | Turns access for that module on or off. |
+| **Search box** | Helps find a module or permission quickly. |
+
+## Role Management Overview
+
+The overview screen shows the current role setup in the system.
+
+It may include:
+
+- total roles in the system
+- current logged-in user session details
+- a list of all system roles
+- a quick view of the available roles
+- an **Add Role** action for creating new roles
+
+### What This Screen Helps With
+
+- understanding how many roles exist
+- checking which role the current user belongs to
+- opening a role to review its permissions
+- starting a new role setup when needed
+
+## Create Role & Assign Permissions
+
+This screen is used when a new role needs to be created and permissions need to be assigned.
+
+![Create role and assign permissions](/screens/roles-management/Roles_Mgmnt_CreateRoles&AssignPermission.png)
+
+### What This Screen Shows
+
+- **Role Name**: the name of the new role
+- module sections such as Users, Organization Info, Contacts, Addresses, and others
+- permission counts for each module
+- enable or disable toggles for module access
+- individual permission rows inside each module
+
+### Common Permissions Shown in Modules
+
+Depending on the module, permissions may include actions such as:
+
+- View
+- View All
+- Create
+- Edit
+- Delete
+- View Role
+- View Permission
+- Assign Role
+- Impersonate
+- Upload Logo
+
+### How to Create a Role
+
+1. Open the **Roles Management** page.
+2. Click **Add Role**.
+3. Enter the role name.
+4. Review the module cards.
+5. Enable the modules that this role should access.
+6. Select or confirm the permissions required for each module.
+7. Make sure the permission count matches the intended access level.
+8. Save the role.
+
+### What the User Should Check Before Saving
+
+- The role name should be clear and easy to understand.
+- Only the required modules should be enabled.
+- Sensitive actions like delete or assign role should be given carefully.
+- Disabled modules should remain off if the role should not access them.
+
+## Roles & Permissions
+
+This screen helps users review the permissions already assigned to a role.
+
+![Roles and permissions review](/screens/roles-management/Roles_Mgmnt_RolesANDPermissions.png)
+
+### What This Screen Shows
+
+- a search box for finding permissions quickly
+- role cards with status information
+- enabled and disabled modules
+- permission counts for each module
+- labels such as **Master disabled** where access is controlled at a higher level
+
+### What the Permission Cards Mean
+
+Each card represents a system module and shows:
+
+- the module name
+- a short description of the module
+- whether the module is enabled or disabled
+- how many permissions are active
+- the total number of permissions available
+
+### What the Status Labels Mean
+
+- **Enabled** - the module is available for this role
+- **Disabled** - the module is not available for this role
+- **Master disabled** - the module is disabled at master level, so role permissions cannot be fully changed until the module is enabled
+
+### How to Use This Screen
+
+1. Open a role from the Roles Management page.
+2. Search for a module or permission if needed.
+3. Review the enabled and disabled modules.
+4. Check the permission count for each module.
+5. Confirm whether the role has the correct access.
+6. Update the role only if permission changes are required.
+
+## How to Use This Module
+
+### To Create a New Role
+
+1. Open **Master Data > Roles Management**.
+2. Click **Add Role**.
+3. Enter the role name.
+4. Assign the required permissions.
+5. Save the role.
+
+### To Review a Role
+
+1. Open the Roles Management page.
+2. Select the role you want to check.
+3. Review the module cards and permission counts.
+4. Confirm whether the access is correct.
+
+### To Control Access
+
+1. Open the role details.
+2. Turn module access on or off using the toggle.
+3. Keep only the permissions required for that role.
+4. Save the changes after reviewing carefully.
+
+## Important Notes
+
+- Role names should be unique and meaningful.
+- Permissions should be assigned only to the users who need them.
+- Avoid giving delete or management permissions unless required.
+- Disabled or master-disabled modules cannot be used until the higher-level setting is enabled.
+- Always review the permission count before saving a role.
+- This module controls user access across the blood bank system, so changes should be made carefully.

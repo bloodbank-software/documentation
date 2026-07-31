@@ -1,0 +1,319 @@
+---
+title: Donor Questionnaire
+description: Record donor screening answers, medical officer review, and questionnaire status.
+---
+
+The **Donor Questionnaire** module is used to record donor screening details, questionnaire answers, and medical officer review before a donation is completed. It helps staff check whether a donor can continue, review the donor's details, and manage questionnaire records in one place.
+
+## Overview
+
+The Donor Questionnaire flow is available from the donor management area and also from blood inventory-related actions. It supports both new questionnaire creation and continuation of an existing questionnaire.
+
+![Donor Questionnaire list view](/screens/donor-questionnaire/Donor_Questionnaire_List.png)
+
+From this module, users can:
+
+- start a new questionnaire
+- continue an unfinished questionnaire
+- review donor information
+- answer screening questions
+- complete the medical officer assessment
+- view questionnaire status and history
+- edit or delete a questionnaire when allowed
+
+## How to Access Donor Questionnaire
+
+Users can open Donor Questionnaire from the donor record or from the action menu in **Donor Management**.
+
+![Donor Questionnaire access from Donor Management](/screens/donor-questionnaire/Donor_Questionnaire_Button.png)
+
+![Donor Questionnaire access from donor record](/screens/donor-questionnaire/Donor_Questionnaire_Button2.png)
+
+In some flows, the system may also prompt the user to start or continue the questionnaire from **Blood Inventory** when a blood unit is being added.
+
+![Start questionnaire from inventory](/screens/donor-questionnaire/Donor_Questionnaire_Start.png)
+
+![Create or continue questionnaire from inventory](/screens/donor-questionnaire/Donor_Questionnaire_Create_From_Inventory.png)
+
+### What These Access Points Mean
+
+- The **Donor Management** action icon opens the questionnaire workflow for the selected donor.
+- The **inventory warning** appears when the system needs a questionnaire for the current visit before a blood unit can continue.
+- **Start Questionnaire** is shown when no accepted questionnaire exists for that visit.
+- **Continue Questionnaire** is shown when a questionnaire already exists but is still in progress.
+
+## Questionnaire List
+
+The main list page shows all questionnaire records in a table format.
+
+![Donor Questionnaire list with statuses](/screens/donor-questionnaire/Donor_Questionnaire_List.png)
+
+The list helps users quickly see:
+
+- questionnaire number
+- donor name
+- DRN
+- blood group
+- donation type
+- status
+- decision
+- medical officer
+- remarks
+
+### What the List Means
+
+Each row represents one questionnaire record. The table also supports scrolling when more columns are available than fit on the screen.
+
+### Column Guide
+
+| Column | Meaning |
+|---|---|
+| **Questionnaire No** | Unique questionnaire record number. |
+| **Donor Name** | Name of the donor linked to the record. |
+| **DRN** | Donor reference number. |
+| **Blood Group** | Donor blood group. |
+| **Donation Type** | Donation type such as Whole Blood. |
+| **Status** | Current questionnaire state. |
+| **Decision** | Final medical or questionnaire decision. |
+| **Medical Officer** | Name of the medical officer who reviewed the record. |
+| **Remarks** | Notes entered during the workflow. |
+
+## Search and Filters
+
+Users can search and filter questionnaire records from the list page.
+
+![Donor Questionnaire search](/screens/donor-questionnaire/Donor_Questionnaire_List_Search.png)
+
+![Donor Questionnaire status filter](/screens/donor-questionnaire/Donor_Questionnaire_List_Filter.png)
+
+The search box helps find a record by donor name, mobile number, or DRN. The status filter helps narrow the list based on the current questionnaire state.
+
+Common list controls include:
+
+- search box
+- status filter
+- rows per page
+- page navigation
+- action icons in the last column
+
+### What the Search and Filters Do
+
+- **Search box** - quickly finds a questionnaire by donor name, mobile number, or DRN.
+- **Status filter** - shows only records in the selected state.
+- **Rows per page** - changes how many records are visible at one time.
+- **Page navigation** - moves between pages when there are many records.
+
+### Status Labels You May See
+
+- Draft
+- Questionnaire Complete
+- Medical Review Complete
+- Questionnaire In Progress
+- Medical Review Completed
+
+These labels help staff understand whether the record is still open, ready for review, or already completed.
+
+## Create Questionnaire
+
+When a user starts a new questionnaire, the system opens a create dialog.
+
+![Create Questionnaire dialog](/screens/donor-questionnaire/Donor_Questionnaire_Questionnar.png)
+
+The create dialog usually includes:
+
+- Donor Name
+- Donation Type
+- Blood Camp ID
+- Create button
+- Cancel button
+
+### What Users Should Enter
+
+- **Donor Name** - select or confirm the donor who will be screened.
+- **Donation Type** - choose the donation type for this visit.
+- **Blood Camp ID** - choose the camp if the questionnaire is connected to a camp visit.
+
+### How to Create a Questionnaire
+
+1. Open Donor Questionnaire from **Donor Management** or from the inventory flow.
+2. Choose the donor.
+3. Select the donation type.
+4. Select the blood camp if required.
+5. Click **Create** to open the questionnaire steps.
+6. Click **Cancel** if you do not want to create the record.
+
+## Donor Information
+
+The Donor Information tab shows basic donor details and previous donation information.
+
+![Donor Information tab](/screens/donor-questionnaire/Donor_Questionnaire_DonorInfo.png)
+
+This tab may include:
+
+- donor name
+- blood group
+- DRN
+- gender
+- age or date of birth
+- last donation date
+- phone number
+- city
+- consent for notification
+- occupation
+- company name
+- telephone number
+- previous donation count
+- previous donation date
+- yes or no questions about donation history
+
+![Donor information review](/screens/donor-questionnaire/Donor_Questionnaire_Form_Review1.png)
+
+### What This Tab Is For
+
+The donor information section is mainly used for review. It helps the staff confirm that the right donor record is being processed.
+
+### How to Use It
+
+1. Review the donor details shown on the tab.
+2. Confirm the donor identity and basic history.
+3. Use **Save & Exit** if you want to save this step and leave the workflow.
+4. Use **Save & Continue** if you want to save and move to the next step.
+
+## Questionnaire Details
+
+The Questionnaire tab contains the donor screening questions.
+
+![Questionnaire tab](/screens/donor-questionnaire/Donor_Questionnaire_Questionnaire_Component.png)
+
+### What This Tab Shows
+
+This section usually includes yes or no answers and multiple-choice style fields for health and eligibility screening.
+
+Typical questions shown in this screen include:
+
+- feels well today
+- eaten in last 4 hours
+- slept well
+- believes HIV risk
+- family jaundice history
+- general symptoms
+- recent procedures
+- medical history
+- phlebotomy site findings
+- recent medication exposure
+- recent surgery or transfusion
+
+![Questionnaire details review](/screens/donor-questionnaire/Donor_Questionnaire_Form_Review2.png)
+
+### How to Use It
+
+1. Answer the screening questions carefully.
+2. Review any dropdown or multi-select values before saving.
+3. Use **Back** if you need to return to the previous step.
+4. Use **Save & Exit** to save and leave the workflow.
+5. Use **Save & Continue** to save and move to medical review.
+
+### Why This Step Matters
+
+This step helps the team record donor screening information in a structured way before medical review.
+
+## Medical Officer Review
+
+The Medical Officer tab is used to record the final medical assessment.
+
+![Medical officer review tab](/screens/donor-questionnaire/Donor_Questionnaire_Medical.png)
+
+This screen may include:
+
+- weight
+- hemoglobin
+- systolic BP
+- diastolic BP
+- pulse
+- temperature
+- decision
+- medical officer name
+- deferred until date
+- remarks
+
+![Medical officer review summary](/screens/donor-questionnaire/Donor_Questionnaire_Form_Review3.png)
+
+### What This Step Means
+
+This step is important because it shows the final assessment outcome for the donor questionnaire. The decision may indicate whether the donor is accepted, temporarily rejected, or handled with another medical outcome.
+
+### How to Use It
+
+1. Review or enter the medical values.
+2. Select the final decision.
+3. Choose the medical officer name if required.
+4. Enter a deferred date if the donor is temporarily not eligible.
+5. Add remarks if needed.
+6. Click **Save Assessment** to complete the review.
+7. Use **Back** if you need to return to the previous step.
+
+## Review and Status Messages
+
+The module includes read-only review screens that summarize the full questionnaire flow.
+
+![Medical review completed summary](/screens/donor-questionnaire/Donor_Questionnaire_List_Questionnaire_Edit_Confirmation_only_MedicalReviewCompleted.png)
+
+These review screens help users confirm:
+
+- donor details
+- questionnaire responses
+- medical officer findings
+- final status of the questionnaire
+
+### What the Status Labels Mean
+
+- **Draft** - the questionnaire has been created but not completed.
+- **Questionnaire Complete** - the questionnaire answers are finished and ready for medical review.
+- **Medical Review Complete** - the medical review has been saved.
+- **Questionnaire In Progress** - the questionnaire was started but not completed yet.
+- **Medical Review Completed** - the final review is finished and the record may need confirmation before editing.
+
+### What the Messages Mean
+
+- **No accepted questionnaire completed for this visit** - the user must start a new questionnaire before continuing from inventory.
+- **Questionnaire not yet completed for this visit** - an incomplete questionnaire already exists, so the user can continue it.
+- **Medical Review Completed** - the record is already finished, so editing may require confirmation.
+
+## Resume, Edit, and Delete Actions
+
+If a questionnaire is already in progress, the system may ask the user whether they want to resume it.
+
+![Questionnaire in progress prompt](/screens/donor-questionnaire/Donor_Questionnaire_Resume.png)
+
+If the record does not yet have an accepted questionnaire for the current visit, the system may prompt the user to start a new questionnaire.
+
+![Questionnaire not completed prompt](/screens/donor-questionnaire/Donor_Questionnaire_UnCompleted.png)
+
+Users may also see confirmation dialogs before editing or deleting an existing questionnaire.
+
+![Edit confirmation for completed questionnaire](/screens/donor-questionnaire/Donor_Questionnaire_List_Questionnaire_Edit_Confirmation_only_MedicalReviewCompleted.png)
+
+![Delete questionnaire confirmation](/screens/donor-questionnaire/Donor_Questionnaire_List_Questionnaire_Delete_Component.png)
+
+### What the Actions Mean
+
+- **Resume** - continue an unfinished questionnaire from where it was left.
+- **Edit** - update a questionnaire when the system allows changes.
+- **Delete** - remove the questionnaire record after confirmation.
+
+### How to Use These Actions
+
+1. Open the questionnaire list.
+2. Find the required record.
+3. Click the action icon for resume, edit, or delete.
+4. Review any warning or confirmation message.
+5. Confirm only if the action is correct.
+
+## Important Notes
+
+- Some questionnaire actions depend on the current status of the record.
+- In-progress records may need to be resumed before they can be completed.
+- Completed medical review records may require confirmation before editing.
+- Delete actions should be used carefully because they remove the questionnaire record.
+- Status labels are important for understanding whether the questionnaire is still being processed or already finished.
+- This module is part of the donor screening process and should be handled carefully by authorized staff.

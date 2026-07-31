@@ -71,6 +71,10 @@ export const Documents: Paths[] = [
         ],
       },
       {
+        title: "Donor Questionnaire",
+        href: "/donor-questionnaire",
+      },
+      {
         title: "Donor Details",
         href: "/donor-details",
         noLink: true,
@@ -120,6 +124,10 @@ export const Documents: Paths[] = [
       {
         title: "Organization",
         href: "/organization",
+      },
+      {
+        title: "Roles Management",
+        href: "/roles-management",
       },
       {
         title: "User Management",
