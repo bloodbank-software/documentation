@@ -1,19 +1,189 @@
 ---
 title: Return
-description: Future Inventory section for blood unit return workflows.
+description: Handle returned blood units from the Add Blood Unit flow.
 ---
 
-The **Return** section is reserved for future workflows related to blood units that return to inventory.
+# Return
 
 ## Overview
 
-This page will be used when the return workflow is added to the documentation set.
+The **Return** tab is used to process blood units that are coming back after being issued or reserved. It helps staff record why the unit is being returned, when it was returned, and where it should go next if it can be reused.
+
+![Return blood unit form](/screens/inventory/Inventory_returnForm.png)
+
+This tab is part of the **Add Blood Unit** flow and is used only for valid returnable units.
 
 ## Purpose
 
-This section is kept in the Inventory structure so the return workflow can be documented alongside the other inventory actions later.
+The purpose of this tab is to keep return handling accurate in inventory.
+
+It helps users:
+
+- record returned blood units
+- confirm why the unit is coming back
+- decide whether the unit can be reused
+- send the unit to quarantine when re-testing is needed
+- mark the unit as discarded when the return reason requires it
+
+## When to Use the Return Tab
+
+Use the Return tab when a blood unit that was already issued or reserved has to come back into inventory.
+
+This tab is useful when:
+
+- an issued unit is returned unused
+- a reserved unit is released back to stock
+- the returned unit may be reused after review
+- the returned unit needs re-testing before reuse
+- the returned unit must be discarded instead of reused
+
+## Which Units Can Be Returned
+
+Only specific blood units can be returned.
+
+### Units that can be returned
+
+- **ISSUED** blood units
+- **RESERVED** blood units
+
+### Units that cannot be returned
+
+- deleted blood units
+- units in any state other than issued or reserved
+
+The system blocks invalid return attempts so inventory records stay correct.
+
+## Page Layout
+
+The Return form shows the return details first and the storage selection below it.
+
+The visible parts of the screen usually include:
+
+- original unit information
+- return reason
+- return date
+- return confirmation
+- re-testing option
+- storage location selection
+- Add and Cancel buttons
+
+This layout helps staff complete the return step by step before saving it.
+
+## Return Details
+
+### Original Unit ID
+
+This shows the blood unit being returned.
+
+A scan option is available so the user can scan the QR code or find the correct unit quickly.
+
+### Return Reason
+
+This field explains why the unit is being returned.
+
+The return reason is important because it helps the system decide whether the unit:
+
+- can be reused
+- should go to quarantine for re-testing
+- must be discarded
+
+### Return Date
+
+This field records the date when the unit was returned.
+
+The return date is required before the form can be saved.
+
+### Confirmation
+
+The form includes a return confirmation option that the user must complete before saving.
+
+This confirms that the return is intentional and correct.
+
+### Re-testing Option
+
+If the unit needs to be checked again before reuse, the user can mark it for re-testing.
+
+When this option is selected, the unit does not go directly back to normal storage.
+
+## Storage Location Selection
+
+If the returned blood can be reused, the user must choose a valid storage location.
+
+The storage selection requires:
+
+- an active **Building**
+- an active **Zone**
+- an active **Equipment**
+
+Only valid active storage locations should be used for reusable returned blood.
+
+The storage cards help the user see:
+
+- equipment name
+- capacity
+- occupied count
+- available count
+- active status
+
+This helps the user choose a storage place that still has room.
+
+### Why storage selection matters
+
+Returned blood is not simply marked as returned. If it can be reused, it must be placed back into a correct storage location so the inventory count stays accurate.
+
+## Re-testing and Discard Handling
+
+The return flow changes depending on the reason and the re-testing requirement.
+
+### When re-testing is needed
+
+If the user marks the unit for re-testing, the returned blood must go to **Quarantine Fridge**.
+
+This means the blood should not be used immediately and must go through testing again before reuse.
+
+### When the return reason means discard
+
+If the return reason is a discard-type reason such as:
+
+- Expired
+- Damaged
+- Contaminated
+
+the unit is handled as discarded instead of being returned for reuse.
+
+In that case, the system treats the unit as discarded stock and does not send it back to usable inventory.
+
+### When the unit can go back to storage
+
+If the return is reusable and does not need quarantine, the blood can be placed back into an active storage equipment unit.
+
+The system also checks:
+
+- whether the building is active
+- whether the zone is active
+- whether the equipment has available capacity
+
+## How to Complete a Return
+
+1. Open the **Return** tab in the **Add Blood Unit** flow.
+2. Scan or enter the **Original Unit ID**.
+3. Confirm that the unit is **ISSUED** or **RESERVED**.
+4. Enter the **Return Date**.
+5. Select the correct **Return Reason**.
+6. Complete the return confirmation.
+7. Mark the unit for re-testing if required.
+8. Choose the building, zone, and equipment if the blood can be reused.
+9. Review the storage availability.
+10. Click **Add** to save the return.
+11. Use **Cancel** if you want to leave without saving.
 
 ## Important Notes
 
-- This is a planned section.
-- The detailed workflow will be added when the return module is ready.
+- Only **ISSUED** or **RESERVED** blood units can be returned.
+- Deleted units cannot be returned.
+- Return confirmation is required.
+- Return date and return reason are required.
+- Returned blood that needs re-testing must go to **Quarantine Fridge**.
+- Reusable returned blood must be assigned to an active building, zone, and equipment.
+- If the return reason is a discard-type reason, the unit is handled as discarded instead of reusable.
+- The return action affects inventory counts, so it should be completed carefully.

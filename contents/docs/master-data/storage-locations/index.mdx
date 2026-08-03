@@ -1,0 +1,228 @@
+---
+title: Storage Locations
+description: Manage the building, zone, and equipment hierarchy used for blood storage.
+---
+
+# Storage Locations
+
+Storage Locations is used to manage the physical storage structure of the blood bank system. It lets administrators create and maintain buildings, zones, and equipment so blood units can be assigned to the correct storage place.
+
+This module is part of the master data setup and is used across the system whenever storage location selection is needed.
+
+## Overview
+
+The Storage Locations page shows the full storage hierarchy in one place.
+
+![Storage Locations overview page](/screens/master-data/storage-location/StorageLocation_Overview.png)
+
+From this screen, users can:
+
+- view the total number of buildings, zones, equipment types, and units
+- add a new building
+- add zones under a building
+- add equipment under a zone
+- edit existing items
+- review the current storage setup
+- manage capacity and status information
+
+This module helps keep the storage structure organized and makes it easier to track where blood units are stored.
+
+## Where Storage Locations Are Used
+
+Storage Locations is used in other parts of the application whenever a valid storage place must be selected.
+
+It is used in:
+
+- inventory creation and updates
+- blood unit storage movement
+- lab testing flows
+- storage-related reports
+- form dropdowns and tree selectors
+
+This keeps storage selection accurate and makes sure users only choose valid buildings, zones, and equipment.
+
+## Page Layout
+
+The page is organized as a storage hierarchy view.
+
+The main areas shown on the screen are:
+
+- **Buildings**
+- **Zones**
+- **Equipment**
+
+The summary cards at the top show overall counts and help users see the current storage setup at a glance.
+
+Each item may display:
+
+- name
+- status
+- capacity
+- available units
+- occupied units
+- related child counts
+
+This layout helps users quickly understand how storage is organized and where each unit belongs.
+
+## Building
+
+A building is the top-level storage container.
+
+![Add Building dialog](/screens/master-data/storage-location/Storage_location_AddBuilding.png)
+
+The Add Building dialog includes:
+
+- **Building Name** - enter the name of the storage building
+- **Cancel** - close the dialog without saving
+- **Add** - save the new building
+
+A building must be created first before zones can be added underneath it.
+
+### What users should know
+
+- building names should be meaningful and easy to identify
+- buildings are created as active by default
+- the system may prevent duplicate building names
+
+![Edit Building dialog](/screens/master-data/storage-location/Storage_location_EditBuilding.png)
+
+The Edit Building dialog lets users update:
+
+- **Building Name**
+- **Status**
+
+The status field controls whether the building is active or inactive.
+
+### Important behavior
+
+- a building can only be edited by authorized users
+- if the building is inactive, child zones and equipment are affected by the active and inactive rules
+- the system may block changes if storage units already exist under the building
+
+## Zone
+
+A zone is created under a selected building.
+
+![Add Zone dialog](/screens/master-data/storage-location/Storage_location_AddZone.png)
+
+The Add Zone dialog includes:
+
+- **Zone Name** - enter the zone name
+- **Cancel** - close without saving
+- **Add** - create the zone
+
+Zones help group equipment inside a building.
+
+### What users should know
+
+- a zone must belong to one building
+- a zone cannot be created under an inactive building
+- zone names should be unique within the same building
+
+![Edit Zone dialog](/screens/master-data/storage-location/Storage_location_EditZone.png)
+
+The Edit Zone dialog includes:
+
+- **Zone Name**
+- **Status**
+
+This lets users rename the zone or change whether it is active.
+
+### Important behavior
+
+- the building assignment of an existing zone cannot be changed
+- a zone cannot be made inactive if blood units are already stored under it
+- a zone cannot be made inactive if active equipment still exists under it
+
+## Equipment
+
+Equipment is created inside a zone and represents the actual storage unit.
+
+![Add Equipment dialog](/screens/master-data/storage-location/Storage_location_AddEquipment.png)
+
+The Add Equipment dialog includes:
+
+- **Equipment Name** - choose the equipment type
+- **Capacity** - enter the total storage capacity
+- **Cancel** - close without saving
+- **Add** - create the equipment
+
+### What the fields mean
+
+- **Equipment Name** identifies the equipment type, such as refrigerator or freezer
+- **Capacity** defines how many blood units the equipment can store
+
+### Important behavior
+
+- equipment can only be added under an active zone
+- the parent building must also be active
+- the system automatically creates equipment identifiers and storage codes
+
+![Edit Equipment dialog](/screens/master-data/storage-location/Storage_locations_EditEquipment.png)
+
+The Edit Equipment dialog lets users update:
+
+- **Equipment Name**
+- **Capacity**
+- **Status**
+
+This screen is used when the equipment details or status need to be changed.
+
+### Important behavior
+
+- equipment cannot be moved to a different zone if blood units are already stored in it
+- equipment cannot be activated if its parent zone or building is inactive
+- equipment cannot be deactivated if blood units are stored in it
+
+## Delete Rules and Restrictions
+
+Deletion is protected by the system to avoid breaking storage records.
+
+![Delete restriction and confirmation](/screens/master-data/storage-location/Storage_locations_BuildingZoneEquipmentDelete_WhenNoOneISINSIDE.png)
+
+The system checks whether a building, zone, or equipment is being used before allowing deletion.
+
+### What happens before delete
+
+- if blood units exist in the building, zone, or equipment, delete is blocked
+- if a zone still has equipment under it, delete is blocked
+- the confirmation popup appears before the action is completed
+
+This protects existing inventory records and keeps storage history valid.
+
+## Storage Hierarchy
+
+The storage structure always follows this order:
+
+- Building
+- Zone
+- Equipment
+
+This hierarchy is important because storage selection in the system depends on valid parent-child relationships.
+
+### Hierarchy rules
+
+- zones belong to buildings
+- equipment belongs to zones
+- active children require active parents
+- storage selections in forms should only show valid active locations
+
+## How to Use This Module
+
+1. Open **Master Data > Storage Locations**.
+2. Review the current buildings, zones, and equipment.
+3. Add a new building if a storage site does not already exist.
+4. Add zones under the required building.
+5. Add equipment under the correct zone.
+6. Update names, capacity, or status when needed.
+7. Check the delete restrictions before removing any location.
+8. Save changes carefully because this module affects inventory and storage selection across the system.
+
+## Important Notes
+
+- Building is the top-level storage unit.
+- Zones must always belong to a building.
+- Equipment must always belong to a zone.
+- Active and inactive status affects what can be selected in forms.
+- Deletion is restricted when blood units already exist in a location.
+- This module is used by inventory, lab testing, and storage-related workflows, so changes should be made carefully.

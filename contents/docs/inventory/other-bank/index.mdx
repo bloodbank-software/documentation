@@ -1,19 +1,235 @@
 ---
 title: Other Bank
-description: Future Inventory section for handling stock received from another blood bank.
+description: Add blood units received from another blood bank into inventory.
 ---
 
-The **Other Bank** section is reserved for future workflows related to blood units received from another blood bank.
+# Other Bank
 
 ## Overview
 
-This page will be used when the other-bank inventory flow is added to the documentation set.
+The **Other Bank** tab is used to add blood units received from an external blood bank into the inventory system. It helps users record the partner blood bank details, unit information, QR code, screening status, and storage location for externally received blood.
+
+![Add blood unit - Other Bank](/screens/inventory/Inventory_AddBloodUnit_OtherBankForm.png)
+
+From this screen, users can:
+
+- record the partner blood bank
+- enter external donor and unit details
+- set blood group and component type
+- record expiry and received dates
+- mark whether the unit was already screened or tested
+- generate or scan a QR code
+- select the final storage location
+- save the external blood unit into inventory
 
 ## Purpose
 
-This section is kept in the Inventory structure so related workflows can be documented in the same place later.
+This tab is used when blood is received from another blood bank and needs to be entered into the system as an inventory unit.
+
+It helps keep external inventory records organized, traceable, and connected to the correct source bank.
+
+## When to Use Other Bank
+
+Use this tab when the blood unit did not come from an internal collection flow.
+
+It is used for:
+
+- blood received from another blood bank
+- externally sourced units that need to be tracked in inventory
+- units transferred into the organization from a partner blood bank
+
+## Page Layout
+
+The Other Bank form is arranged in sections so users can enter all required external blood details before saving.
+
+The main sections include:
+
+- external blood source details
+- blood unit information
+- screening and testing status
+- QR code generation or scanning
+- storage location selection
+
+## External Blood Details
+
+### Partner Blood Bank
+
+This field identifies the external blood bank that supplied the unit.
+
+It is required because the system must know where the blood came from.
+
+### External Donor ID
+
+This field stores the donor reference used by the partner blood bank.
+
+It helps match the external unit with the source bank's records.
+
+### Unit ID / Code
+
+This field stores the external blood unit code.
+
+It is used for traceability and cross-reference with the source blood bank.
+
+### Blood Group
+
+This field shows the blood group of the external unit, such as:
+
+- A+
+- A-
+- B+
+- O+
+- AB+
+- and other valid blood groups
+
+### Component Type
+
+This field identifies the blood component being added, such as:
+
+- Whole Blood
+- RBC
+- Plasma
+- Platelets
+
+### Volume
+
+This field stores the volume of the external unit in milliliters.
+
+The value must match the expected quantity for the component.
+
+### Expiry Date
+
+This field records when the unit expires.
+
+It is required so the system can track usable stock correctly.
+
+### Received Date
+
+This field records the date the blood was received from the other bank.
+
+It is required for inventory history and stock tracking.
+
+## Screening and Testing
+
+The form includes checkboxes for the external blood source status.
+
+### Screened
+
+This indicates whether the external unit was already screened by the source bank.
+
+### Tested
+
+This indicates whether the external unit was already tested by the source bank.
+
+These values help the system understand how much verification has already been completed before the unit enters inventory.
+
+If the unit was already screened or tested externally, those details should be reflected accurately.
+
+## QR Code Handling
+
+The QR Code section lets the user either scan an existing QR code or generate a new one.
+
+### Scan Existing QR
+
+Use this option when the unit already has a QR code from another source.
+
+### Generate New QR
+
+Use this option when the system should create a new QR code for the unit.
+
+The QR code helps identify the blood unit later when it is viewed, stored, moved, or returned.
+
+## Storage Location
+
+The Storage Location section is used to select where the unit will be stored in the organization.
+
+It includes:
+
+- Building
+- Zone
+- Equipment
+
+### Building
+
+Select the active building where the blood unit will be stored.
+
+### Zone
+
+Select the active zone inside the chosen building.
+
+### Equipment
+
+Select the exact storage equipment inside the zone.
+
+The selected location must be valid and active.
+
+### What the storage cards show
+
+The storage area may show equipment cards with:
+
+- equipment name
+- total capacity
+- occupied count
+- available count
+- active status
+
+This helps users choose a storage unit that still has room.
+
+## Validation and Save Rules
+
+The system checks important rules before allowing the unit to be saved.
+
+### Required checks
+
+- partner blood bank must be selected
+- external donor ID must be entered
+- unit ID / code must be entered
+- blood group must be selected
+- component type must be selected
+- volume must be valid
+- expiry date must be valid
+- received date must be valid
+- QR code must be available
+- storage location must be complete
+
+### Storage checks
+
+- building must be active
+- zone must be active
+- equipment must be active
+- equipment must belong to the selected zone
+- zone must belong to the selected building
+- equipment must have available capacity
+
+### Business checks
+
+- the unit must be compatible with the selected storage type
+- the data entered must accurately reflect the external source
+- the unit should only be saved when all required details are complete
+
+## How to Add an Other Bank Blood Unit
+
+1. Open **Add Blood Unit**.
+2. Select the **Other Bank** tab.
+3. Choose the **Partner Blood Bank**.
+4. Enter the **External Donor ID**.
+5. Enter the **Unit ID / Code**.
+6. Select the **Blood Group**.
+7. Select the **Component Type**.
+8. Enter the **Volume**.
+9. Set the **Expiry Date** and **Received Date**.
+10. Mark **Screened** and **Tested** if applicable.
+11. Scan an existing QR or generate a new QR code.
+12. Select the correct **Building**, **Zone**, and **Equipment**.
+13. Review the storage capacity and active status.
+14. Click **Add** to save the external blood unit.
+15. Use **Cancel** if you want to exit without saving.
 
 ## Important Notes
 
-- This is a planned section.
-- The detailed workflow will be added when the other-bank module is ready.
+- The Other Bank tab is only for externally received blood units.
+- Partner blood bank details are required for traceability.
+- QR code handling is mandatory for identification.
+- Storage must be selected carefully because it affects inventory placement.
+- The selected equipment must have free capacity.
+- External screening and testing details should be entered correctly.
+- The form should only be saved when all required fields are complete and valid.

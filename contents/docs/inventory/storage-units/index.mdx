@@ -1,19 +1,228 @@
 ---
 title: Storage Units
-description: Future Inventory section for storage-based unit handling.
+description: Browse blood units by storage hierarchy and move them to another storage location.
 ---
 
-The **Storage Units** section is reserved for future Inventory storage workflows.
+# Storage Units
+
+The **Storage Units** tab is used to browse blood units by their storage hierarchy. It helps users view inventory grouped by building, zone, and equipment, and move blood units to another storage location when needed.
 
 ## Overview
 
-This page will be used when storage-specific inventory handling is added to the documentation set.
+This module gives a storage-based view of inventory so users can quickly see where blood units are currently stored.
 
-## Purpose
+![Inventory by Storage Units overview](/screens/inventory/Inventory_By_StorageUnits_Overview.png)
 
-This section is kept in the Inventory structure so the documentation can grow with the product without changing the overall navigation.
+From this view, users can:
+
+- see summary counts for inventory
+- browse buildings
+- drill down into zones
+- open equipment details
+- view blood units stored in each equipment
+- move blood units to another storage location
+
+This view is useful when inventory needs to be checked by physical storage location instead of by unit list only.
+
+## Page Layout
+
+The Storage Units view is divided into three main parts:
+
+- **Buildings**
+- **Zones**
+- **Equipment**
+
+Each level helps users narrow down the inventory to the exact storage place where blood is stored.
+
+The screen also shows top summary cards such as:
+
+- Total Units
+- Expiring Soon
+- Screening
+- Reserved
+- Expired and Discarded
+- Out of Stock
+
+These cards give a quick snapshot of current inventory status.
+
+## Summary Cards
+
+The summary cards at the top of the screen help users understand the overall inventory position.
+
+### Total Units
+Shows the total number of available blood units in stock.
+
+### Expiring Soon
+Shows blood units that are close to expiry.
+
+### Screening
+Shows blood units that are still awaiting screening results.
+
+### Reserved
+Shows units that are reserved for patients.
+
+### Expired and Discarded
+Shows units that are no longer available for use.
+
+### Out of Stock
+Shows storage groups that currently do not have available stock.
+
+These cards help users quickly identify storage and inventory pressure points.
+
+## Browse by Storage Hierarchy
+
+The main storage area is divided into three columns:
+
+- Buildings
+- Zones
+- Equipment
+
+Users can search within each column to find a specific building, zone, or equipment item.
+
+### Buildings
+This column lists all active buildings in the organization.
+
+### Zones
+This column shows zones under the selected building.
+
+### Equipment
+This column shows the equipment units under the selected zone.
+
+The selected building and zone determine which equipment list is shown on the right.
+
+### What the equipment cards show
+Each equipment card may show:
+
+- equipment name
+- number of units
+- capacity
+- used count
+- free count
+- active count
+
+This helps users quickly understand storage availability.
+
+## Equipment Details
+
+When a user opens a specific equipment item, the system shows the equipment details page.
+
+![Equipment details page](/screens/inventory/InventoryBYstorageview_EQuipmentInside_BloodUnitsDetailsPage.png)
+
+This page shows:
+
+- equipment information
+- storage details
+- blood units assigned to the equipment
+- search and filter options
+- pagination controls
+
+The blood unit list usually includes:
+
+- unit ID
+- blood group
+- component type
+- collected by
+- expiry date
+- source type
+- storage location
+- status
+
+This page is used when users want to inspect the units stored inside one equipment unit.
+
+## Move Units Action
+
+The Move Units action is used to change the storage location of one or more blood units.
+
+![Move storage locations popup](/screens/inventory/InventoryBystorageUnits_MoveStorageLocations_popupform.png)
+
+The popup includes:
+
+- **Building** - choose the destination building
+- **Zone** - choose the destination zone
+- **Equipment** - choose the exact destination storage unit
+- **Reason** - explain why the units are being moved
+- **Cancel** - close the popup without saving
+- **Submit** - confirm the move
+
+The destination must be valid, active, and compatible with the blood unit being moved.
+
+## Move a Single Unit or Multiple Units
+
+Users can move one blood unit or multiple selected blood units from an equipment page.
+
+![Multi-select move blood units](/screens/inventory/InventoryByStorageView_Multiselect_MoveBloodUnitsto-Another-Storage_Equipment.png)
+
+This is useful when several units must be moved at the same time.
+
+The system shows the selected rows so the user can review them before completing the move.
+
+### What happens during a bulk move
+
+- the selected units are checked one by one
+- valid units are moved to the chosen destination
+- invalid units are shown as failed
+- the system returns a summary of success and failure
+
+This makes bulk movement easier while still preserving validation for each unit.
+
+## Move Rules and Restrictions
+
+The system applies rules before moving a blood unit to another storage location.
+
+### Units that cannot be moved
+
+- deleted blood units
+- expired blood units
+- discarded blood units
+- reserved blood units
+- issued blood units
+- in-transit blood units
+
+### Quarantine rules
+
+- quarantine units can only be moved to **Quarantine Fridge**
+- only quarantined units can be placed in **Quarantine Fridge**
+
+### Component compatibility rules
+
+The destination equipment must match the blood component type.
+
+- non-quarantine units must be moved to an allowed storage type for that blood component
+- quarantine units can only be moved to **Quarantine Fridge**
+
+### Capacity rules
+
+- the destination equipment must not be full
+- the system checks the available capacity before confirming the move
+
+### Location rules
+
+- building, zone, and equipment must all be active
+- the zone must belong to the selected building
+- the equipment must belong to the selected zone
+- the destination building, zone, and equipment must all be valid and active
+
+These rules protect inventory accuracy and prevent invalid storage moves.
+
+## How to Use This Module
+
+1. Open the Inventory page and select the **Storage Units** tab.
+2. Browse the buildings, zones, and equipment lists.
+3. Search for the building, zone, or equipment you need.
+4. Open an equipment item to view the blood units stored inside it.
+5. Select one or more blood units if you want to move them.
+6. Click **Move Units**.
+7. Choose the destination building, zone, and equipment.
+8. Enter the reason for the move.
+9. Review the capacity and storage rules.
+10. Click **Submit** to complete the move.
 
 ## Important Notes
 
-- This is a planned section.
-- The detailed workflow will be added when the storage module is ready.
+- Storage Units view is based on the active inventory hierarchy.
+- The system only shows valid storage combinations in forms.
+- Move actions are restricted for expired, discarded, issued, reserved, and in-transit units.
+- Quarantine units have special storage rules.
+- Bulk move may succeed for some units and fail for others.
+- Always check the destination capacity before submitting a move.
+- This module affects real inventory placement, so updates should be done carefully.
