@@ -1,0 +1,196 @@
+---
+title: Initial Setup
+description: First-time setup guide for the Blood Bank project using the init script.
+keywords:
+  - initial setup
+  - init script
+  - first time setup
+  - blood bank
+---
+
+# Initial Setup
+
+The Initial Setup process is used to prepare the blood bank system for the first time. It helps create the first organization, the first admin user, and the master reference data required for the application to work correctly.
+
+This guide explains the setup flow from the beginning so a new user can follow it step by step.
+
+## Get the Code
+
+Start by getting the project code from the repository.
+
+### What to do
+
+1. Clone the repository or pull the latest changes from your team branch.
+2. Open the backend project folder in the terminal.
+3. Confirm you are working on the correct branch.
+
+Keeping the code updated before setup helps avoid version mismatches.
+
+## Prerequisites
+
+Before starting the setup, make sure you have:
+
+- Node.js installed
+- npm installed
+- MongoDB available and running
+- Redis available and running
+- access to the project repository
+- a valid `.env` file or `.env.example` file
+
+If your deployment uses external services such as email or storage, make sure those values are also configured before starting the application.
+
+## Install Dependencies
+
+After the code is available locally, install the required packages.
+
+```bash
+npm install
+```
+
+This installs all backend dependencies needed for the init script and the application services.
+
+## Configure the Environment File
+
+Copy the example environment file if needed and update the values for your local or staging setup.
+
+```text
+cp .env.example .env
+```
+
+Check the following values carefully:
+
+- MongoDB connection string
+- Redis settings
+- service ports
+- mail and notification credentials
+- file storage configuration
+- frontend URL values
+
+The init script also writes the organization prefix into the backend `.env` file after setup is complete.
+
+## Run the Init Script
+
+Run the init script from the project root.
+
+```bash
+npm run init
+```
+
+The script starts an interactive setup flow and asks for the organization and admin details.
+
+### Organization details requested
+
+- Organization name
+- Organization prefix
+- City
+
+### Admin details requested
+
+- Full name
+- Email
+- Phone country code
+- Phone number
+- Password
+- Confirm password
+
+The script validates the values before saving them. If the input is invalid, it asks you to correct the values and try again.
+
+## What the Init Script Creates
+
+The init script performs the following actions in order:
+
+1. Seeds permissions.
+2. Seeds roles.
+3. Seeds master blood groups.
+4. Seeds blood component types.
+5. Seeds mail templates.
+6. Checks whether an organization already exists.
+7. If no organization exists, creates the new organization.
+8. Generates a username for the first admin user.
+9. Creates the first admin user.
+10. Creates the admin user profile.
+11. Saves the organization prefix into the backend `.env` file.
+12. Shows the setup summary in the terminal.
+
+## If an Organization Already Exists
+
+If the system finds an existing organization, it does not create a new organization or admin user again.
+
+In that case, the script only refreshes the master and reference data and exits.
+
+## After Initialization
+
+After the init script finishes successfully:
+
+1. Confirm the organization name and prefix shown in the terminal.
+2. Note the admin username and admin email that were created.
+3. Add the same organization prefix to the frontend environment as `NEXT_PUBLIC_ORG_PREFIX`.
+4. Start the application services.
+
+## Start the Application
+
+After setup is complete, start the backend services.
+
+```bash
+npm run start:all
+```
+
+This starts the main backend services together.
+
+## Related Scripts
+
+The project also includes other setup and maintenance scripts.
+
+### `npm run init`
+
+Runs the first-time initialization flow.
+
+### `npm run seed:allmaster`
+
+Seeds or refreshes the full set of master data for the organization.
+
+### `npm run seed-run`
+
+Runs the seed pipeline used by the project.
+
+### `npm run backfill:donor`
+
+Backfills donor records where needed.
+
+### `npm run backfill:donor-notification-preference`
+
+Updates donor notification preferences based on available contact data.
+
+### `npm run start:all`
+
+Starts the backend services together after setup is complete.
+
+## Troubleshooting
+
+### Init script stops because of invalid input
+
+Check the organization name, prefix, email, and password values. The script validates these fields and will ask you to re-enter them if needed.
+
+### Organization prefix is rejected
+
+The organization prefix must contain only letters and be 1 to 5 characters long.
+
+### Password is rejected
+
+The password must be strong enough and must match the confirmation value.
+
+### Email already exists
+
+If the admin email already exists in the system, use a different email address.
+
+### Setup completes but frontend registration does not work
+
+Make sure the frontend environment has the same organization prefix set as `NEXT_PUBLIC_ORG_PREFIX`.
+
+## Important Notes
+
+- Run the init script only when setting up the system for the first time or when refreshing setup data in a controlled environment.
+- The init script creates the first admin user for the organization.
+- The organization prefix must be consistent across backend and frontend environments.
+- Keep database, Redis, and environment settings ready before running setup.
+- Do not share the generated admin credentials outside the authorized setup team.

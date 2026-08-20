@@ -23,6 +23,10 @@ export const Documents: Paths[] = [
         title: "Getting Started",
         href: "/gettingstarted",
       },
+      {
+        title: "Initial Setup",
+        href: "/initial-setup",
+      },
     ],
   },
   {
